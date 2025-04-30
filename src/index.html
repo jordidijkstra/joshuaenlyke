@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trouw Lyke&Joshua</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Wij vieren samen!</h1>
+        <h2>Lyke & Joshua</h2>
+        <img src="assets/images/placeholder.jpg" alt="Wedding Celebration">
+        <p>Zaterdag 12 juli 2025</p>
+        <div id="countdown">
+            <div class="countdown-item">
+                <span id="days">0</span>
+                <p>Dagen</p>
+            </div>
+            <div class="countdown-item">
+                <span id="hours">0</span>
+                <p>Uren</p>
+            </div>
+            <div class="countdown-item">
+                <span id="minutes">0</span>
+                <p>Minuten</p>
+            </div>
+            <div class="countdown-item">
+                <span id="seconds">0</span>
+                <p>Seconden</p>
+            </div>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="details">
+            <h2>Waar</h2>
+            <p>Ambrosiushoeve</p>
+            <p>Brandstee 12, 2260 Westerlo</p>
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2380.6842274702553!2d4.938278154640511!3d51.11565068586349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c14f2735766cd3%3A0x6e7c59c29cb516df!2sFeestzaal%20Ambrosiushoeve%20Westerlo!5e1!3m2!1sen!2sbe!4v1746019808272!5m2!1sen!2sbe" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </section>
+        
+        <section id="schedule">
+            <h2>Planning</h2>
+            <ul>
+                <li>15u15 - Ceremonie</li>
+                <li>16u45 - 19u - Receptie</li>
+            </ul>
+        </section>
+        
+        <section id="rsvp">
+            <h2>RSVP</h2>
+            <form id="rsvp-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="attendance">Will you attend?</label>
+                <select id="attendance" name="attendance" required>
+                    <option value="">Select...</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Lyke & Joshua | Alle rechten voorbehouden | gemaakt door de schone broer</p>
+    </footer>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

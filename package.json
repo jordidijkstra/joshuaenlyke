@@ -1,0 +1,21 @@
+{
+  "name": "wedding-website",
+  "version": "1.0.0",
+  "description": "A simple responsive website for a wedding in Wood Green.",
+  "main": "src/index.html",
+  "scripts": {
+    "start": "live-server src",
+    "build": "echo 'Build script not defined'"
+  },
+  "keywords": [
+    "wedding",
+    "responsive",
+    "website"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
