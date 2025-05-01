@@ -51,12 +51,12 @@ body {
 }
 
 .header-container {
-    padding: 60px 80px; /* Voeg witruimte rondom de header toe */
+    padding: 40px 80px 60px 80px; /* Voeg witruimte rondom de header toe */
     background-color: #5c804b; /* Achtergrondkleur buiten de gestippelde lijn */
 }
 
 header {
-    height: calc(100vh - 120px); /* Zorgt ervoor dat de header 100vh minus de padding van de container inneemt */
+    height: calc(100vh - 100px); /* Zorgt ervoor dat de header 100vh minus de padding van de container inneemt */
     border: 3px dashed #f1f1f1; /* Gestippelde rand */
     border-radius: 10px; /* Optioneel: afgeronde hoeken */
     display: flex; /* Maakt het mogelijk om de inhoud te centreren */
@@ -87,7 +87,7 @@ header p{
     font-family: "Antic Didone", serif;
     color: #f1f1f1;
     font-size: 1.5rem;
-    margin: 5px auto;
+    margin: 3px auto;
     text-transform: uppercase;
 }
 
@@ -193,40 +193,48 @@ h2 {
 }
 
 .container-inner-rsvp {
-    display: flex; /* Zorgt ervoor dat de inhoud naast elkaar wordt geplaatst */
-    justify-content: center; /* Centreert de inhoud horizontaal */
-    align-items: center; /* Centreert de inhoud verticaal */
-    gap: 20px; /* Ruimte tussen de <p> en <a> elementen */
+    display: flex; /* Zorgt ervoor dat de inhoud flexibel wordt weergegeven */
+    flex-direction: column; /* Plaatst de inhoud onder elkaar */
+    justify-content: center; /* Centreert de inhoud verticaal */
+    align-items: center; /* Centreert de inhoud horizontaal */
+    gap: 20px; /* Ruimte tussen de elementen */
     text-align: center; /* Zorgt ervoor dat de tekst gecentreerd is */
-    height: 100%; /* Zorgt ervoor dat de container de volledige hoogte gebruikt */
-    max-width: 70%;
-    margin: 0 auto; /* Centreert de inhoud binnen de container */
+    width: 100%; /* Zorgt ervoor dat de container de volledige breedte gebruikt */
+    margin: 0 auto; /* Centreert de container binnen de parent */
 }
 
 .container-inner-rsvp p {
     margin: 0; /* Verwijdert standaard marges */
     font-family: "Antic Didone", serif; /* Zorgt voor consistentie in de stijl */
-    font-size: 2rem; /* Optioneel: pas de tekstgrootte aan */
-    color: #f1f1f1; /* Optioneel: tekstkleur */
-    text-align: right;
+    font-size: 2rem; /* Pas de tekstgrootte aan */
+    font-weight: bold;
+    color: #f1f1f1; /* Tekstkleur */
+    text-align: center; /* Centreert de tekst */
+    padding: 10px 20px; /* Voeg wat binnenruimte toe */
+    text-transform: uppercase;
 }
 
 .container-inner-rsvp a {
+    margin: 10px 0; /* Voeg wat ruimte boven en onder de knop toe */
     display: inline-block; /* Zorgt ervoor dat de knop correct wordt weergegeven */
-    text-align: center;
-    border: 2px solid #f1f1f1;
-    color: #f1f1f1;
-    padding: 10px 30px;
-    text-decoration: none;
-    font-family: "Antic Didone", serif;
-    font-size: 1.5rem;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    text-align: center; /* Centreert de tekst in de knop */
+    border: 2px solid #f1f1f1; /* Randkleur */
+    color: saddlebrown; /* Tekstkleur */
+    padding: 10px 30px; /* Binnenruimte van de knop */
+    text-decoration: none; /* Verwijdert onderstreping */
+    font-family: "Antic Didone", serif; /* Zorgt voor consistentie in de stijl */
+    font-size: 1.5rem; /* Pas de tekstgrootte aan */
+    border-radius: 5px; /* Maakt de hoeken afgerond */
+    transition: background-color 0.5s, color 0.5s, transform 0.1s, box-shadow 0.1s; /* Voeg een animatie toe */
+    background-color: antiquewhite; /* Transparante achtergrond */
+    box-shadow: 0 7px 0px rgb(0, 0, 0);
 }
 
 .container-inner-rsvp a:hover {
-    background-color: antiquewhite;
-    color: lightslategrey;
+    background-color: antiquewhite; /* Achtergrondkleur bij hover */
+    color: saddlebrown; /* Tekstkleur bij hover */
+    transform: translateY(3px); /* Laat de knop iets naar beneden bewegen */
+    box-shadow: 0 4px 0px rgb(0, 0, 0);
 }
 
 section {
@@ -247,7 +255,7 @@ section p, li{
 }
 
 section li{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin: 5px 0; /* Ruimte tussen de lijstitems */
 }
 
@@ -257,7 +265,7 @@ section ul {
 }
 
 section img {
-    max-width: 100%; /* Zorgt ervoor dat de afbeelding niet breder wordt dan de sectie */
+    max-width: 60%; /* Zorgt ervoor dat de afbeelding niet breder wordt dan de sectie */
     height: auto; /* Houdt de verhoudingen van de afbeelding intact */
     display: block; /* Verwijdert eventuele inline spacing */
     margin: 10px auto; /* Centreert de afbeelding binnen de sectie */
