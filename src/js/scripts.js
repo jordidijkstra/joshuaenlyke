@@ -33,3 +33,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const interval = setInterval(updateCountdown, 1000);
     updateCountdown();
 });
+
+document.getElementById("login-form").addEventListener("submit", function (e) {
+    e.preventDefault(); // Voorkom standaard formulierverzending
+
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    // Simpele loginlogica
+    if (username === "trouwgast" && password === "test123") {
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("content-container").style.display = "block";
+    } else if (username === "trouwgast" && password === "123test") {
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("content-container").style.display = "block";
+    } else {
+        const error = document.getElementById("login-error");
+        error.style.display = "block"; // Toon foutmelding
+    }
+});

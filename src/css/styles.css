@@ -5,42 +5,99 @@ body {
     background-color: #5c804b;
 }
 
-header {
+#login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     background-color: #5c804b;
-    padding: 20px;
-    text-align: center;
-    height: 80vh;
-    width: 80vw;
-    margin: 5vh auto;
-    border: 3px dashed #f1f1f1;
-    border-radius: 10px;
 }
 
-header img{
-    width: 50%;
-    height: 50%;
+#login {
+    max-width: 400px;
+    padding: 20px;
+    border: 2px solid #f1f1f1;
+    border-radius: 10px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#login label {
+    display: block;
+    margin: 10px 0 5px;
+    font-family: "Antic Didone", serif;
+}
+
+#login input {
+    width: 80%;
+    padding: 10px;
+    margin: 7.5px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#login button {
+    padding: 10px 20px;
+    background-color: #5c804b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Antic Didone", serif;
+}
+
+#login button:hover {
+    background-color: #3c5a35;
+}
+
+.header-container {
+    padding: 60px 80px; /* Voeg witruimte rondom de header toe */
+    background-color: #5c804b; /* Achtergrondkleur buiten de gestippelde lijn */
+}
+
+header {
+    height: calc(100vh - 120px); /* Zorgt ervoor dat de header 100vh minus de padding van de container inneemt */
+    border: 3px dashed #f1f1f1; /* Gestippelde rand */
+    border-radius: 10px; /* Optioneel: afgeronde hoeken */
+    display: flex; /* Maakt het mogelijk om de inhoud te centreren */
+    flex-direction: column; /* Zorgt ervoor dat de inhoud onder elkaar staat */
+    justify-content: center; /* Centreert de inhoud verticaal */
+    align-items: center; /* Centreert de inhoud horizontaal */
+    text-align: center; /* Zorgt ervoor dat de tekst gecentreerd is */
+    background-color: #5c804b; /* Achtergrondkleur van de header */
+    color: #f1f1f1; /* Tekstkleur */
+    box-sizing: border-box; /* Inclusief padding en border in de hoogte */
+    position: relative; /* Voor het positioneren van de afbeelding */
+}
+
+header img {
+    max-width: 40%; /* Zorgt ervoor dat de afbeelding niet breder wordt dan 80% van de header */
+    height: auto; /* Houdt de verhoudingen van de afbeelding intact */
+    margin: 10px 0; /* Voeg wat ruimte toe boven en onder de afbeelding */
 }
 
 header h2{
     font-family: "Antic Didone", serif;
     color: #f1f1f1;
-    font-size: 4rem;
-    margin-top: 10px;
+    font-size: 3rem;
+    margin: 5px auto;
 }
 
 header p{
     font-family: "Antic Didone", serif;
     color: #f1f1f1;
     font-size: 1.5rem;
-    margin: 10px auto;
+    margin: 5px auto;
     text-transform: uppercase;
 }
 
 .button{
-    background-color: #5c804b;
-    color: #f1f1f1;
-    border: 2px solid #f1f1f1;
+    display: inline-block;
+    text-align: center;
+    border: 2px solid lightslategrey;
+    color: lightslategrey;
     padding: 10px 20px;
+    margin: 10px auto;
     text-decoration: none;
     font-family: "Antic Didone", serif;
     font-size: 1.2rem;
@@ -48,11 +105,27 @@ header p{
     transition: background-color 0.3s, color 0.3s, transform 0.3s;
 }
 
+.of{
+    display: inline-block;
+    padding: 0 7.5px;
+    font-family: "Corinthia", cursive;
+    font-size: 1.5em;
+}
+
+.button:hover {
+    background-color: #5c804b;
+    color: #f1f1f1;
+}
+
 #countdown {
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin: 10px auto;
+    justify-content: center; /* Centreert de countdown-items horizontaal */
+    gap: 20px; /* Ruimte tussen de countdown-items */
+    position: absolute; /* Maakt het mogelijk om de countdown te positioneren */
+    bottom: -40px; /* Plaatst de countdown 20px boven de onderkant van de header */
+    left: 50%; /* Centreert de countdown horizontaal */
+    transform: translateX(-50%); /* Corrigeert de positie zodat deze perfect gecentreerd is */
+    z-index: 1; /* Zorgt ervoor dat de countdown boven de gestippelde lijn staat */
 }
 
 .countdown-item {
@@ -84,6 +157,7 @@ header p{
 h1 {
     font-family: "Corinthia", cursive;
     color: #f1f1f1;
+    margin: 5px auto;
 }
 
 h2 {
@@ -91,12 +165,68 @@ h2 {
 }
 
 .container {
-    max-width: 1200px;
+    width: 100%; /* De container neemt de volledige breedte van het scherm */
     margin: 0 auto;
-    padding: 20px;
+    padding: 60px 0; /* Alleen verticale padding */
     display: flex;
     flex-direction: column; /* Standaard: secties onder elkaar */
     gap: 20px;
+    background-color: antiquewhite;
+}
+
+.container-rsvp{
+    width: 100%; /* De container neemt de volledige breedte van het scherm */
+    margin: 0 auto;
+    padding: 60px 0; /* Alleen verticale padding */
+    display: flex;
+    flex-direction: column; /* Standaard: secties onder elkaar */
+    gap: 20px;
+    background-color: saddlebrown;
+}
+
+.container-inner {
+    width: 80vw; /* Zorgt ervoor dat de inhoud dezelfde breedte heeft als de header */
+    margin: 0 auto; /* Centreert de inhoud binnen de container */
+    display: flex;
+    flex-direction: column; /* Standaard: secties onder elkaar */
+    gap: 20px;
+}
+
+.container-inner-rsvp {
+    display: flex; /* Zorgt ervoor dat de inhoud naast elkaar wordt geplaatst */
+    justify-content: center; /* Centreert de inhoud horizontaal */
+    align-items: center; /* Centreert de inhoud verticaal */
+    gap: 20px; /* Ruimte tussen de <p> en <a> elementen */
+    text-align: center; /* Zorgt ervoor dat de tekst gecentreerd is */
+    height: 100%; /* Zorgt ervoor dat de container de volledige hoogte gebruikt */
+    max-width: 70%;
+    margin: 0 auto; /* Centreert de inhoud binnen de container */
+}
+
+.container-inner-rsvp p {
+    margin: 0; /* Verwijdert standaard marges */
+    font-family: "Antic Didone", serif; /* Zorgt voor consistentie in de stijl */
+    font-size: 2rem; /* Optioneel: pas de tekstgrootte aan */
+    color: #f1f1f1; /* Optioneel: tekstkleur */
+    text-align: right;
+}
+
+.container-inner-rsvp a {
+    display: inline-block; /* Zorgt ervoor dat de knop correct wordt weergegeven */
+    text-align: center;
+    border: 2px solid #f1f1f1;
+    color: #f1f1f1;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-family: "Antic Didone", serif;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.container-inner-rsvp a:hover {
+    background-color: antiquewhite;
+    color: lightslategrey;
 }
 
 section {
@@ -116,15 +246,21 @@ section p, li{
     font-family: "Antic Didone", serif;
 }
 
+section li{
+    font-size: 2rem;
+    margin: 5px 0; /* Ruimte tussen de lijstitems */
+}
+
 section ul {
     list-style-type: none;
+    padding: 40px 0;
 }
 
 section img {
     max-width: 100%; /* Zorgt ervoor dat de afbeelding niet breder wordt dan de sectie */
     height: auto; /* Houdt de verhoudingen van de afbeelding intact */
     display: block; /* Verwijdert eventuele inline spacing */
-    margin: 0 auto; /* Centreert de afbeelding binnen de sectie */
+    margin: 10px auto; /* Centreert de afbeelding binnen de sectie */
 }
 
 .ambrosiushoeve img {
@@ -140,7 +276,7 @@ footer {
 }
 
 @media (min-width: 1024px) {
-    .container {
+    .container-inner {
         flex-direction: row; /* Plaatst secties naast elkaar */
         justify-content: space-between; /* Ruimte tussen de secties */
         align-items: stretch; /* Lijn de secties bovenaan uit */
@@ -153,30 +289,33 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header, footer {
+    header {
         padding: 15px;
     }
 
-    .container {
-        padding: 15px;
+    header h1 {
+        font-size: 2rem; /* Pas de grootte van de titel aan */
     }
 
-    section {
-        margin: 5px;
-        padding: 15px;
+    header h2 {
+        font-size: 1.5rem; /* Pas de grootte van de subtitel aan */
+    }
+
+    header img {
+        max-width: 70%; /* Maak de afbeelding iets kleiner */
     }
 }
 
 @media (max-width: 480px) {
-    h1 {
-        font-size: 24px;
+    header h1 {
+        font-size: 1.5rem; /* Nog kleinere titel voor kleine schermen */
     }
 
-    h2 {
-        font-size: 20px;
+    header h2 {
+        font-size: 1.2rem; /* Nog kleinere subtitel */
     }
 
-    .container {
-        padding: 10px;
+    header img {
+        max-width: 60%; /* Maak de afbeelding nog kleiner */
     }
 }
