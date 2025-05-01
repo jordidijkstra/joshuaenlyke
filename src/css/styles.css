@@ -36,6 +36,18 @@ header p{
     text-transform: uppercase;
 }
 
+.button{
+    background-color: #5c804b;
+    color: #f1f1f1;
+    border: 2px solid #f1f1f1;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-family: "Antic Didone", serif;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
 #countdown {
     display: flex;
     justify-content: center;
@@ -106,6 +118,17 @@ section p, li{
 
 section ul {
     list-style-type: none;
+}
+
+section img {
+    max-width: 100%; /* Zorgt ervoor dat de afbeelding niet breder wordt dan de sectie */
+    height: auto; /* Houdt de verhoudingen van de afbeelding intact */
+    display: block; /* Verwijdert eventuele inline spacing */
+    margin: 0 auto; /* Centreert de afbeelding binnen de sectie */
+}
+
+.ambrosiushoeve img {
+    max-width: 80%; /* Specifiek voor de afbeelding in de eerste sectie */
 }
 
 footer {
