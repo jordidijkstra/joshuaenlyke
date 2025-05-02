@@ -304,20 +304,42 @@ footer {
     }
 
     .header-container {
-        padding: 20px; /* Verminder de padding voor kleinere schermen */
+        padding: 20px  20px 40px 20px; /* Verminder de padding voor kleinere schermen */
+    }
+
+    header {
+        flex-direction: column; /* Zorgt ervoor dat de inhoud onder elkaar komt */
+        text-align: center; /* Centreert de tekst */
+        padding: 20px; /* Voeg wat padding toe voor een nette weergave */
+        height: calc(100vh - 60px);
+    }
+
+    header img{
+        max-width: 90%;
     }
 
     header h1 {
-        font-size: 2rem; /* Pas de grootte van de titel aan */
+        font-size: 3rem; /* Pas de grootte van de titel aan */
+        margin-bottom: 10px;
+        word-break: break-word; /* Breek woorden indien nodig */
+        white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
+        text-align: center;
     }
 
     header h2 {
-        font-size: 1.5rem; /* Pas de grootte van de subtitel aan */
+        font-size: 3rem; /* Pas de grootte van de subtitel aan */
+        margin-bottom: 10px;
+        word-break: break-word; /* Breek woorden indien nodig */
+        white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
+        text-align: center;
     }
 
-    #countdown {
-        flex-direction: column; /* Plaats de countdown-items onder elkaar */
-        gap: 10px; /* Voeg ruimte tussen de items toe */
+    header p {
+        font-size: 2rem; /* Pas de grootte van de tekst aan */
+        margin-bottom: 10px; /* Voeg ruimte toe onder de tekst */
+        word-break: break-word; /* Breek woorden indien nodig */
+        white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
+        text-align: center;
     }
 
     .container-rsvp {
