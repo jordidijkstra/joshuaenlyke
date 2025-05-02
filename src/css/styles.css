@@ -297,8 +297,14 @@ footer {
 }
 
 @media (max-width: 768px) {
-    header {
-        padding: 15px;
+    body {
+        font-size: 16px; /* Zorg voor een leesbare tekstgrootte */
+        margin: 0;
+        padding: 0;
+    }
+
+    .header-container {
+        padding: 20px; /* Verminder de padding voor kleinere schermen */
     }
 
     header h1 {
@@ -309,21 +315,52 @@ footer {
         font-size: 1.5rem; /* Pas de grootte van de subtitel aan */
     }
 
-    header img {
-        max-width: 70%; /* Maak de afbeelding iets kleiner */
-    }
-}
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5rem; /* Nog kleinere titel voor kleine schermen */
+    #countdown {
+        flex-direction: column; /* Plaats de countdown-items onder elkaar */
+        gap: 10px; /* Voeg ruimte tussen de items toe */
     }
 
-    header h2 {
-        font-size: 1.2rem; /* Nog kleinere subtitel */
+    .container-rsvp {
+        padding: 20px; /* Verminder de padding */
     }
 
-    header img {
-        max-width: 60%; /* Maak de afbeelding nog kleiner */
+    .container-inner-rsvp p {
+        font-size: 1.5rem; /* Pas de tekstgrootte aan */
+    }
+
+    .container-inner-rsvp a {
+        font-size: 1.2rem; /* Pas de knoptekstgrootte aan */
+        padding: 10px 20px; /* Verminder de knopgrootte */
+    }
+
+    .container {
+        padding: 20px; /* Verminder de padding */
+    }
+
+    .container-inner {
+        width: 100%; /* Zorg ervoor dat de container de volledige breedte gebruikt */
+        gap: 15px; /* Verminder de ruimte tussen secties */
+    }
+
+    section {
+        padding: 15px; /* Verminder de padding binnen secties */
+    }
+
+    section img {
+        max-width: 100%; /* Zorg ervoor dat afbeeldingen responsief zijn */
+        height: auto; /* Behoud de verhoudingen van de afbeelding */
+    }
+
+    section ul {
+        padding-left: 20px; /* Zorg voor een nette uitlijning van lijsten */
+    }
+
+    section ul li {
+        font-size: 1rem; /* Pas de tekstgrootte van lijstitems aan */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Maak de tekst in de footer kleiner */
+        text-align: center; /* Centreer de tekst in de footer */
     }
 }
