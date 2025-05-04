@@ -103,17 +103,37 @@ header p{
 }
 
 .button{
-    display: inline-block;
-    text-align: center;
-    border: 2px solid lightslategrey;
-    color: lightslategrey;
-    padding: 10px 20px;
-    margin: 10px auto;
-    text-decoration: none;
-    font-family: "Antic Didone", serif;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    margin: 10px 0; /* Voeg wat ruimte boven en onder de knop toe */
+    display: inline-block; /* Zorgt ervoor dat de knop correct wordt weergegeven */
+    text-align: center; /* Centreert de tekst in de knop */
+    border: 2px solid antiquewhite; /* Randkleur */
+    color: saddlebrown; /* Tekstkleur */
+    padding: 10px 30px; /* Binnenruimte van de knop */
+    text-decoration: none; /* Verwijdert onderstreping */
+    font-family: "Antic Didone", serif; /* Zorgt voor consistentie in de stijl */
+    font-size: 1.5rem; /* Pas de tekstgrootte aan */
+    border-radius: 5px; /* Maakt de hoeken afgerond */
+    transition: background-color 0.5s, color 0.5s, transform 0.1s, box-shadow 0.1s; /* Voeg een animatie toe */
+    background-color: antiquewhite; /* Transparante achtergrond */
+    box-shadow: 0 7px 0px rgb(0, 0, 0);
+}
+
+.button:hover {
+    background-color: antiquewhite; /* Achtergrondkleur bij hover */
+    color: saddlebrown; /* Tekstkleur bij hover */
+    transform: translateY(3px); /* Laat de knop iets naar beneden bewegen */
+    box-shadow: 0 4px 0px rgb(0, 0, 0);
+}
+
+#locatie .button{
+    background-color: saddlebrown; /* Achtergrondkleur van de knop */
+    color: antiquewhite; /* Tekstkleur van de knop */
+    border: none;
+}
+
+#locatie .button:hover {
+    transform: translateY(3px); /* Laat de knop iets naar beneden bewegen */
+    box-shadow: 0 4px 0px rgb(0, 0, 0);
 }
 
 .of{
@@ -123,10 +143,6 @@ header p{
     font-size: 1.5em;
 }
 
-.button:hover {
-    background-color: #5c804b;
-    color: #f1f1f1;
-}
 
 #countdown {
     display: flex;
@@ -172,7 +188,7 @@ h1 {
 }
 
 h2 {
-    color: grey;
+    color: darkslategray;
 }
 
 .container {
@@ -190,7 +206,7 @@ h2 {
     margin: 0 auto;
     padding: 60px 0; /* Alleen verticale padding */
     display: flex;
-    flex-direction: column; /* Standaard: secties onder elkaar */
+    flex-direction: row; /* Standaard: secties onder elkaar */
     gap: 20px;
     background-color: saddlebrown;
 }
@@ -203,49 +219,24 @@ h2 {
     gap: 20px;
 }
 
-.container-inner-rsvp {
-    display: flex; /* Zorgt ervoor dat de inhoud flexibel wordt weergegeven */
-    flex-direction: column; /* Plaatst de inhoud onder elkaar */
-    justify-content: center; /* Centreert de inhoud verticaal */
-    align-items: center; /* Centreert de inhoud horizontaal */
-    gap: 20px; /* Ruimte tussen de elementen */
-    text-align: center; /* Zorgt ervoor dat de tekst gecentreerd is */
-    width: 100%; /* Zorgt ervoor dat de container de volledige breedte gebruikt */
-    margin: 0 auto; /* Centreert de container binnen de parent */
-}
-
-.container-inner-rsvp p {
+.container-rsvp p {
+    display: inline-block;
     margin: 0; /* Verwijdert standaard marges */
-    font-family: "Antic Didone", serif; /* Zorgt voor consistentie in de stijl */
-    font-size: 2rem; /* Pas de tekstgrootte aan */
+    font-family: "Corinthia", cursive; /* Zorgt voor consistentie in de stijl */
+    font-size: 5rem; /* Pas de tekstgrootte aan */
     font-weight: bold;
     color: #f1f1f1; /* Tekstkleur */
-    text-align: center; /* Centreert de tekst */
+    text-align: right; /* Centreert de tekst */
     padding: 10px 20px; /* Voeg wat binnenruimte toe */
-    text-transform: uppercase;
+    width: 50%;
 }
 
-.container-inner-rsvp a {
-    margin: 10px 0; /* Voeg wat ruimte boven en onder de knop toe */
-    display: inline-block; /* Zorgt ervoor dat de knop correct wordt weergegeven */
-    text-align: center; /* Centreert de tekst in de knop */
-    border: 2px solid #f1f1f1; /* Randkleur */
-    color: saddlebrown; /* Tekstkleur */
-    padding: 10px 30px; /* Binnenruimte van de knop */
-    text-decoration: none; /* Verwijdert onderstreping */
-    font-family: "Antic Didone", serif; /* Zorgt voor consistentie in de stijl */
-    font-size: 1.5rem; /* Pas de tekstgrootte aan */
-    border-radius: 5px; /* Maakt de hoeken afgerond */
-    transition: background-color 0.5s, color 0.5s, transform 0.1s, box-shadow 0.1s; /* Voeg een animatie toe */
-    background-color: antiquewhite; /* Transparante achtergrond */
-    box-shadow: 0 7px 0px rgb(0, 0, 0);
-}
-
-.container-inner-rsvp a:hover {
-    background-color: antiquewhite; /* Achtergrondkleur bij hover */
-    color: saddlebrown; /* Tekstkleur bij hover */
-    transform: translateY(3px); /* Laat de knop iets naar beneden bewegen */
-    box-shadow: 0 4px 0px rgb(0, 0, 0);
+.container-inner-rsvp{
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    justify-content: left;
+    align-content: center;
 }
 
 section {
@@ -265,14 +256,29 @@ section p, li{
     font-family: "Antic Didone", serif;
 }
 
+.planning{
+    display: flex; /* Activeer Flexbox */
+    flex-direction: column; /* Zorg ervoor dat de inhoud onder elkaar staat */
+    justify-content: center; /* Centreer de inhoud verticaal */
+    align-items: center; 
+}
+
 section li{
     font-size: 1.5rem;
-    margin: 5px 0; /* Ruimte tussen de lijstitems */
+    margin: 2.5px 0; /* Ruimte tussen de lijstitems */
+
 }
 
 section ul {
     list-style-type: none;
     padding: 40px 0;
+    margin: 0; /* Verwijder standaard marges */
+    display: flex;
+    flex-direction: column; /* Plaats de lijstitems onder elkaar */
+    justify-content: center; /* Centreer de lijstitems verticaal */
+    align-items: center; /* Centreer de lijstitems horizontaal */
+    gap: 10px;
+    height: 80%;
 }
 
 section img {
@@ -290,8 +296,13 @@ footer {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     padding: 10px;
-    background-color: #5c804b;
+    background-color: saddlebrown;
     color: #f1f1f1;
+}
+
+footer p{
+    display: inline-block;
+    padding: 10px 0;
 }
 
 @media (min-width: 1024px) {
@@ -357,11 +368,11 @@ footer {
         padding: 20px; /* Verminder de padding */
     }
 
-    .container-inner-rsvp p {
+    .container-rsvp p {
         font-size: 1.5rem; /* Pas de tekstgrootte aan */
     }
 
-    .container-inner-rsvp a {
+    .container-rsvp a {
         font-size: 1.2rem; /* Pas de knoptekstgrootte aan */
         padding: 10px 20px; /* Verminder de knopgrootte */
     }
@@ -395,5 +406,29 @@ footer {
     footer p {
         font-size: 0.9rem; /* Maak de tekst in de footer kleiner */
         text-align: center; /* Centreer de tekst in de footer */
+        display: block;
+        padding: 2px 0;
+    }
+
+    .hideInMobile {
+        display: none; /* Verberg elementen met deze klasse op mobiele apparaten */
+    }
+
+    #countdown {
+        gap: 10px; /* Verminder de ruimte tussen de countdown-items */
+    }
+
+    .countdown-item {
+        width: 60px; /* Maak de countdown-items kleiner */
+        height: 60px; /* Zorg ervoor dat de hoogte overeenkomt met de breedte */
+        font-size: 0.8rem; /* Pas de tekstgrootte aan */
+    }
+
+    .countdown-item span {
+        font-size: 1.2rem; /* Maak de cijfers kleiner */
+    }
+
+    .countdown-item p {
+        font-size: 0.5rem; /* Maak de tekst onder de cijfers kleiner */
     }
 }
