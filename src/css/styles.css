@@ -378,6 +378,10 @@ footer p {
         display: none; /* Verberg elementen met deze klasse op mobiele apparaten */
     }
 
+    .of{
+        display: block;
+    }
+
     #countdown {
         gap: 10px; /* Verminder de ruimte tussen de countdown-items */
         position: relative;
@@ -399,5 +403,27 @@ footer p {
 
     .countdown-item p {
         font-size: 0.5rem; /* Maak de tekst onder de cijfers kleiner */
+    }
+
+    .container-inner-rsvp {
+        width: 80vw; /* Zorgt ervoor dat de inhoud dezelfde breedte heeft als de header */
+        margin: 0 auto; /* Centreert de inhoud binnen de container */
+        display: flex;
+        flex-direction: row; /* Standaard: secties onder elkaar */
+        gap: 20px;
+    }
+    
+    .container-rsvp p {
+        display: block;
+        margin: 0; /* Verwijdert standaard marges */
+        font-size: 3rem; /* Pas de tekstgrootte aan */
+        text-align: center; /* Centreert de tekst */
+        padding: 10px 20px; /* Voeg wat binnenruimte toe */
+        width: 50%;
+    }
+    
+    .container-inner-rsvp-button {
+        display: block;
+        width: 50%;
     }
 }
