@@ -13,70 +13,25 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #5c804b;
-}
-
-#login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #5c804b;
-}
-
-#login {
-    max-width: 400px;
-    padding: 20px;
-    border: 2px solid #f1f1f1;
-    border-radius: 10px;
-    background-color: #fff;
-    text-align: center;
-}
-
-#login label {
-    display: block;
-    margin: 10px 0 5px;
-    font-family: "Antic Didone", serif;
-}
-
-#login input {
-    width: 80%;
-    padding: 10px;
-    margin: 7.5px auto;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#login button {
-    padding: 10px 20px;
-    background-color: #5c804b;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-family: "Antic Didone", serif;
-}
-
-#login button:hover {
-    background-color: #3c5a35;
+    background-color: #515541;
 }
 
 .header-container {
     padding: 40px 80px 60px 80px; /* Voeg witruimte rondom de header toe */
-    background-color: #5c804b; /* Achtergrondkleur buiten de gestippelde lijn */
+    background-color: #515541; /* Achtergrondkleur buiten de gestippelde lijn */
 }
 
 header {
     height: calc(100vh - 100px); /* Zorgt ervoor dat de header 100vh minus de padding van de container inneemt */
-    border: 3px dashed #f1f1f1; /* Gestippelde rand */
+    border: 3px dashed #FDF5E6; /* Gestippelde rand */
     border-radius: 10px; /* Optioneel: afgeronde hoeken */
     display: flex; /* Maakt het mogelijk om de inhoud te centreren */
     flex-direction: column; /* Zorgt ervoor dat de inhoud onder elkaar staat */
     justify-content: center; /* Centreert de inhoud verticaal */
     align-items: center; /* Centreert de inhoud horizontaal */
     text-align: center; /* Zorgt ervoor dat de tekst gecentreerd is */
-    background-color: #5c804b; /* Achtergrondkleur van de header */
-    color: #f1f1f1; /* Tekstkleur */
+    background-color: #515541; /* Achtergrondkleur van de header */
+    color: #FDF5E6; /* Tekstkleur */
     box-sizing: border-box; /* Inclusief padding en border in de hoogte */
     position: relative; /* Voor het positioneren van de afbeelding */
 }
@@ -87,62 +42,61 @@ header img {
     margin: 10px 0; /* Voeg wat ruimte toe boven en onder de afbeelding */
 }
 
-header h2{
+header h2 {
     font-family: "Antic Didone", serif;
-    color: #f1f1f1;
+    color: #FDF5E6;
     font-size: 3rem;
     margin: 5px auto;
 }
 
-header p{
+header p {
     font-family: "Antic Didone", serif;
-    color: #f1f1f1;
+    color: #FDF5E6;
     font-size: 1.5rem;
     margin: 3px auto;
     text-transform: uppercase;
 }
 
-.button{
+.button {
     margin: 10px 0; /* Voeg wat ruimte boven en onder de knop toe */
     display: inline-block; /* Zorgt ervoor dat de knop correct wordt weergegeven */
     text-align: center; /* Centreert de tekst in de knop */
-    border: 2px solid antiquewhite; /* Randkleur */
-    color: saddlebrown; /* Tekstkleur */
+    border: 2px solid #515541; /* Randkleur */
+    color: #515541; /* Tekstkleur */
     padding: 10px 30px; /* Binnenruimte van de knop */
     text-decoration: none; /* Verwijdert onderstreping */
     font-family: "Antic Didone", serif; /* Zorgt voor consistentie in de stijl */
     font-size: 1.5rem; /* Pas de tekstgrootte aan */
     border-radius: 5px; /* Maakt de hoeken afgerond */
     transition: background-color 0.5s, color 0.5s, transform 0.1s, box-shadow 0.1s; /* Voeg een animatie toe */
-    background-color: antiquewhite; /* Transparante achtergrond */
-    box-shadow: 0 7px 0px rgb(0, 0, 0);
+    background-color: #FDF5E6; /* Transparante achtergrond */
+    box-shadow: 0 7px 0px rgb(81, 85, 65);
 }
 
 .button:hover {
-    background-color: antiquewhite; /* Achtergrondkleur bij hover */
-    color: saddlebrown; /* Tekstkleur bij hover */
+    background-color: #FDF5E6; /* Achtergrondkleur bij hover */
+    color: #515541; /* Tekstkleur bij hover */
     transform: translateY(3px); /* Laat de knop iets naar beneden bewegen */
-    box-shadow: 0 4px 0px rgb(0, 0, 0);
+    box-shadow: 0 4px 0px rgb(81, 85, 65);
 }
 
-#locatie .button{
-    background-color: saddlebrown; /* Achtergrondkleur van de knop */
-    color: antiquewhite; /* Tekstkleur van de knop */
-    border: none;
+#locatie .button {
+    background-color: #FDF5E6; /* Achtergrondkleur van de knop */
+    color: #515541; /* Tekstkleur van de knop */
+    border: 1px solid #515541; /* Randkleur van de knop */
 }
 
 #locatie .button:hover {
     transform: translateY(3px); /* Laat de knop iets naar beneden bewegen */
-    box-shadow: 0 4px 0px rgb(0, 0, 0);
+    box-shadow: 0 4px 0px rgb(81, 85, 65);
 }
 
-.of{
+.of {
     display: inline-block;
     padding: 0 7.5px;
     font-family: "Corinthia", cursive;
     font-size: 1.5em;
 }
-
 
 #countdown {
     display: flex;
@@ -162,7 +116,7 @@ header p{
     justify-content: center;
     width: 80px;
     height: 80px;
-    background-color: #f1f1f1;
+    background-color: #FDF5E6;
     color: darkslategrey;
     border-radius: 50%;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -183,7 +137,7 @@ header p{
 
 h1 {
     font-family: "Corinthia", cursive;
-    color: #f1f1f1;
+    color: #FDF5E6;
     margin: 5px auto;
 }
 
@@ -198,17 +152,17 @@ h2 {
     display: flex;
     flex-direction: column; /* Standaard: secties onder elkaar */
     gap: 20px;
-    background-color: antiquewhite;
+    background-color: #515541;
 }
 
-.container-rsvp{
+.container-rsvp {
     width: 100%; /* De container neemt de volledige breedte van het scherm */
     margin: 0 auto;
-    padding: 60px 0; /* Alleen verticale padding */
+    padding: 30px 0; /* Alleen verticale padding */
     display: flex;
     flex-direction: row; /* Standaard: secties onder elkaar */
     gap: 20px;
-    background-color: saddlebrown;
+    background-color: #FDF5E6;
 }
 
 .container-inner {
@@ -219,22 +173,30 @@ h2 {
     gap: 20px;
 }
 
+.container-inner-rsvp {
+    width: 80vw; /* Zorgt ervoor dat de inhoud dezelfde breedte heeft als de header */
+    margin: 0 auto; /* Centreert de inhoud binnen de container */
+    display: flex;
+    flex-direction: row; /* Standaard: secties onder elkaar */
+    gap: 20px;
+}
+
 .container-rsvp p {
     display: inline-block;
     margin: 0; /* Verwijdert standaard marges */
     font-family: "Corinthia", cursive; /* Zorgt voor consistentie in de stijl */
-    font-size: 5rem; /* Pas de tekstgrootte aan */
+    font-size: 7rem; /* Pas de tekstgrootte aan */
     font-weight: bold;
-    color: #f1f1f1; /* Tekstkleur */
+    color: #515541; /* Tekstkleur */
     text-align: right; /* Centreert de tekst */
     padding: 10px 20px; /* Voeg wat binnenruimte toe */
     width: 50%;
 }
 
-.container-inner-rsvp{
+.container-inner-rsvp-button {
     display: inline-block;
     width: 50%;
-    text-align: left;
+    text-align: center;
     justify-content: left;
     align-content: center;
 }
@@ -243,7 +205,7 @@ section {
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: #FDF5E6;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
@@ -252,21 +214,20 @@ section h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-section p, li{
+section p, li {
     font-family: "Antic Didone", serif;
 }
 
-.planning{
+.planning {
     display: flex; /* Activeer Flexbox */
     flex-direction: column; /* Zorg ervoor dat de inhoud onder elkaar staat */
     justify-content: center; /* Centreer de inhoud verticaal */
-    align-items: center; 
+    align-items: center;
 }
 
-section li{
+section li {
     font-size: 1.5rem;
     margin: 2.5px 0; /* Ruimte tussen de lijstitems */
-
 }
 
 section ul {
@@ -296,11 +257,11 @@ footer {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     padding: 10px;
-    background-color: saddlebrown;
-    color: #f1f1f1;
+    background-color: #515541;
+    color: #FDF5E6;
 }
 
-footer p{
+footer p {
     display: inline-block;
     padding: 10px 0;
 }
@@ -326,7 +287,7 @@ footer p{
     }
 
     .header-container {
-        padding: 20px  20px 40px 20px; /* Verminder de padding voor kleinere schermen */
+        padding: 20px 20px 40px 20px; /* Verminder de padding voor kleinere schermen */
     }
 
     header {
@@ -336,7 +297,7 @@ footer p{
         height: calc(100vh - 60px);
     }
 
-    header img{
+    header img {
         max-width: 90%;
     }
 
@@ -346,6 +307,7 @@ footer p{
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
         text-align: center;
+        width: 50%;
     }
 
     header h2 {
@@ -354,6 +316,7 @@ footer p{
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
         text-align: center;
+        width: 50%;
     }
 
     header p {
@@ -362,6 +325,7 @@ footer p{
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
         text-align: center;
+        width: 50%;
     }
 
     .container-rsvp {
