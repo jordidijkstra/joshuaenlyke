@@ -139,13 +139,6 @@ body.reverse-colors .button {
     box-shadow: 0 4px 0px rgb(81, 85, 65); /* Oorspronkelijk rgb(253, 245, 230) */
 }
 
-.of {
-    display: inline-block;
-    padding: 0 7.5px;
-    font-family: "Corinthia", cursive;
-    font-size: 1.5em;
-}
-
 #countdown {
     display: flex;
     justify-content: center; /* Centreert de countdown-items horizontaal */
@@ -192,7 +185,7 @@ body.reverse-colors .button {
 }
 
 h1 {
-    font-family: 'Kendra Signature', sans-serif;
+    font-family: 'Kendra Signature', "Corinthia", sans-serif;
     color: #515541;
     margin: 0 auto;
     font-size: 1.5rem; /* Pas de grootte van de titel aan */
@@ -202,35 +195,22 @@ h1 {
     color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
-h2 {
-    color: #FDF5E6;
-}
-
-.reverse-colors h2 {
-    color: #515541; /* Oorspronkelijk #515541 */
-}
-
 .container {
     width: 100%; /* De container neemt de volledige breedte van het scherm */
     margin: 0 auto;
-    padding: 60px 0; /* Alleen verticale padding */
     display: flex;
     flex-direction: column; /* Standaard: secties onder elkaar */
-    gap: 20px;
-    background-color: #FDF5E6;
+    background-color: rgb(81, 85, 65);
 }
 
 .reverse-colors .container {
-    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+    background-color: #FDF5E6; /* Oorspronkelijk rgba(253, 245, 230, 0.3) */
 }
 
 .container-rsvp {
     width: 100%; /* De container neemt de volledige breedte van het scherm */
     margin: 0 auto;
-    padding: 80px 0; /* Alleen verticale padding */
-    display: flex;
-    flex-direction: row; /* Standaard: secties onder elkaar */
-    gap: 20px;
+    padding: 20px 0; /* Alleen verticale padding */
     background-color: #515541;
 }
 
@@ -239,63 +219,55 @@ h2 {
 }
 
 .container-inner {
-    width: 80vw; /* Zorgt ervoor dat de inhoud dezelfde breedte heeft als de header */
+    width: 70%; /* Zorgt ervoor dat de inhoud dezelfde breedte heeft als de header */
     margin: 0 auto; /* Centreert de inhoud binnen de container */
     display: flex;
     flex-direction: column; /* Standaard: secties onder elkaar */
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0; /* Alleen verticale padding */
 }
 
 .container-inner-rsvp {
     width: 80vw; /* Zorgt ervoor dat de inhoud dezelfde breedte heeft als de header */
     margin: 0 auto; /* Centreert de inhoud binnen de container */
-    display: flex;
-    flex-direction: row; /* Standaard: secties onder elkaar */
-    gap: 20px;
 }
 
 .container-rsvp p {
-    display: inline-block;
+    display: block;
     margin: 0; /* Verwijdert standaard marges */
-    font-family: "Outfit", sans-serif; /* Zorgt voor consistentie in de stijl */
-    font-size: 5rem; /* Pas de tekstgrootte aan */
+    font-family: 'Kendra Signature', "Corinthia", sans-serif; /* Zorgt voor consistentie in de stijl */
+    font-size: 4rem; /* Pas de tekstgrootte aan */
     font-weight: bold;
-    text-transform: uppercase;
     color: #FDF5E6; /* Tekstkleur */
-    text-align: right; /* Centreert de tekst */
-    padding: 0 20px; /* Voeg wat binnenruimte toe */
-    width: 60%;
+    text-align: center; /* Centreert de tekst */
+    width: 100%;
 }
 
 .reverse-colors .container-rsvp p{
     color: #515541; /* Oorspronkelijk #FDF5E6 */
 }
 
-.container-inner-rsvp-button {
-    display: inline-block;
-    width: 40%;
-    text-align: center;
-    justify-content: left;
-    align-content: center;
-}
-
 section {
-    padding: 20px;
-    margin: 10px;
-    border-radius: 8px;
+    padding: 50px 0;
+    margin: 10px 0;
     background-color: #515541;
     color: #FDF5E6;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+    max-width: 40%;
+    border:2px solid #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 .reverse-colors section {
     background-color: #FDF5E6;
     color: #515541; /* Oorspronkelijk #515541 */
+    border:2px solid #515541;
 }
 
 section h2 {
     font-family: "Outfit", sans-serif;
+    padding-top: 20px;
+    height: 30%;
 }
 
 section p, li {
@@ -310,31 +282,21 @@ section p, li {
 }
 
 section li {
-    font-size: 1.5rem;
+    font-size: 1rem;
     margin: 2.5px 0; /* Ruimte tussen de lijstitems */
 }
 
 section ul {
     list-style-type: none;
-    padding: 40px 0;
+    padding: 20px 0;
     margin: 0; /* Verwijder standaard marges */
     display: flex;
     flex-direction: column; /* Plaats de lijstitems onder elkaar */
     justify-content: center; /* Centreer de lijstitems verticaal */
     align-items: center; /* Centreer de lijstitems horizontaal */
     gap: 10px;
-    height: 80%;
-}
-
-section img {
-    max-width: 60%; /* Zorgt ervoor dat de afbeelding niet breder wordt dan de sectie */
-    height: auto; /* Houdt de verhoudingen van de afbeelding intact */
-    display: block; /* Verwijdert eventuele inline spacing */
-    margin: 10px auto; /* Centreert de afbeelding binnen de sectie */
-}
-
-.ambrosiushoeve img {
-    max-width: 80%; /* Specifiek voor de afbeelding in de eerste sectie */
+    height: 70%;
+    line-height: 1.5;
 }
 
 footer {
@@ -442,6 +404,42 @@ footer p {
     opacity: 1; /* Toon de actieve afbeelding */
 }
 
+.map-buttons {
+    display: flex;
+    justify-content: center; /* Centreer de knoppen */
+    gap: 20px; /* Voeg ruimte toe tussen de knoppen */
+    margin-top: 20px; /* Voeg wat ruimte boven de knoppen toe */
+}
+
+.map-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* Breedte van de knop */
+    height: 60px; /* Hoogte van de knop */
+    border-radius: 10px; /* Maak de hoeken afgerond */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Voeg een schaduw toe */
+    transition: transform 0.2s, box-shadow 0.2s; /* Voeg een hover-effect toe */
+}
+
+.waze{
+    background-color: lightskyblue; /* Achtergrondkleur van de knop */
+}
+
+.maps{
+    background-color: white; /* Achtergrondkleur van de knop */
+}
+
+.map-button img {
+    width: 30px; /* Breedte van het icoon */
+    height: 30px; /* Hoogte van het icoon */
+}
+
+.map-button:hover {
+    transform: scale(1.1); /* Vergroot de knop iets bij hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Versterk de schaduw bij hover */
+}
+
 @media (min-width: 1024px) {
     .container-inner {
         flex-direction: row; /* Plaatst secties naast elkaar */
@@ -504,21 +502,9 @@ footer p {
         width: 50%;
     }
 
-    .container-rsvp {
-        padding: 20px; /* Verminder de padding */
-    }
-
-    .container-rsvp p {
-        font-size: 1.5rem; /* Pas de tekstgrootte aan */
-    }
-
-    .container-rsvp a {
-        font-size: 1.2rem; /* Pas de knoptekstgrootte aan */
-        padding: 10px 20px; /* Verminder de knopgrootte */
-    }
-
     .container {
         padding: 20px; /* Verminder de padding */
+        width: 100%; /* Zorg ervoor dat de container de volledige breedte gebruikt */
     }
 
     .container-inner {
@@ -528,15 +514,13 @@ footer p {
 
     section {
         padding: 15px; /* Verminder de padding binnen secties */
+        max-width: none;
+        width: 90%;
     }
 
     section img {
         max-width: 100%; /* Zorg ervoor dat afbeeldingen responsief zijn */
         height: auto; /* Behoud de verhoudingen van de afbeelding */
-    }
-
-    section ul {
-        padding-left: 20px; /* Zorg voor een nette uitlijning van lijsten */
     }
 
     section ul li {
@@ -552,10 +536,6 @@ footer p {
 
     .hideInMobile {
         display: none; /* Verberg elementen met deze klasse op mobiele apparaten */
-    }
-
-    .of{
-        display: block;
     }
 
     #countdown {
@@ -580,26 +560,14 @@ footer p {
     .countdown-item p {
         font-size: 0.5rem; /* Maak de tekst onder de cijfers kleiner */
     }
-
-    .container-inner-rsvp {
-        width: 80vw; /* Zorgt ervoor dat de inhoud dezelfde breedte heeft als de header */
-        margin: 0 auto; /* Centreert de inhoud binnen de container */
-        display: flex;
-        flex-direction: row; /* Standaard: secties onder elkaar */
-        gap: 20px;
-    }
     
     .container-rsvp p {
         display: block;
-        margin: 0; /* Verwijdert standaard marges */
-        font-size: 3rem; /* Pas de tekstgrootte aan */
+        margin: 0 auto; /* Verwijdert standaard marges */
+        font-size: 2rem; /* Pas de tekstgrootte aan */
         text-align: center; /* Centreert de tekst */
         padding: 10px 20px; /* Voeg wat binnenruimte toe */
-        width: 50%;
+        width: 90%;
     }
     
-    .container-inner-rsvp-button {
-        display: block;
-        width: 50%;
-    }
 }

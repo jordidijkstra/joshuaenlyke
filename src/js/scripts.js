@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Start de slideshow
     if (slides.length > 0) {
         slides[currentIndex].classList.add('active'); // Toon de eerste slide
-        setInterval(showNextSlide, 3000); // Wissel elke 3 seconden
+        setInterval(showNextSlide, 7000); // Wissel elke 5 seconden
     } else {
         console.error("Geen slides gevonden in de slideshow.");
     }
