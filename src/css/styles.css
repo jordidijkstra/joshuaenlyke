@@ -302,8 +302,8 @@ footer p {
     }
 
     header h1 {
-        font-size: 3rem; /* Pas de grootte van de titel aan */
-        margin-bottom: 10px;
+        font-size: 1.5rem; /* Pas de grootte van de titel aan */
+        margin-bottom: 5px;
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
         text-align: center;
@@ -311,8 +311,8 @@ footer p {
     }
 
     header h2 {
-        font-size: 3rem; /* Pas de grootte van de subtitel aan */
-        margin-bottom: 10px;
+        font-size: 1.5rem; /* Pas de grootte van de subtitel aan */
+        margin-bottom: 5px;
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
         text-align: center;
@@ -320,8 +320,8 @@ footer p {
     }
 
     header p {
-        font-size: 2rem; /* Pas de grootte van de tekst aan */
-        margin-bottom: 10px; /* Voeg ruimte toe onder de tekst */
+        font-size: 1rem; /* Pas de grootte van de tekst aan */
+        margin-bottom: 5px; /* Voeg ruimte toe onder de tekst */
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
         text-align: center;
@@ -380,6 +380,11 @@ footer p {
 
     #countdown {
         gap: 10px; /* Verminder de ruimte tussen de countdown-items */
+        position: relative;
+        left: 0;
+        transform: translateX(0); /* Verwijder de translate om de countdown-items te centreren */
+        bottom: 0; /* Verwijder de negatieve waarde om de countdown-items onder de header te plaatsen */
+        margin: 20px auto; /* Centreer de countdown-items */
     }
 
     .countdown-item {
