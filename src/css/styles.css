@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'rondal-regular'; /* Geef het font een naam */
+    src: url('../assets/fonts/Rondal-Regular.otf') format('otf'); /* Pad naar het .woff2-bestand */
+    font-weight: normal; /* Optioneel: specificeer het gewicht */
+    font-style: normal;  /* Optioneel: specificeer de stijl */
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +12,7 @@
 }
 
 html, body {
-    overflow-x: hidden; /* Verwijder horizontale scrollbars */
+    overflow-x: hidden; /*Verwijder horizontale scrollbars */
     width: 100%; /* Zorg ervoor dat de breedte van de pagina niet groter is dan het scherm */
 }
 
@@ -13,82 +20,123 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #515541;
+    background-color: #FDF5E6; /* Oorspronkelijk #515541 */
+    color: #515541;
+    background: url('../assets/images/logoTransparant.png') no-repeat center center fixed; /* Voeg de achtergrondafbeelding toe */
+    background-size: cover;
+}
+
+body.reverse-colors {
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 .header-container {
-    padding: 40px 80px 60px 80px; /* Voeg witruimte rondom de header toe */
-    background-color: #515541; /* Achtergrondkleur buiten de gestippelde lijn */
+    padding: 10px 80px 60px 80px; /* Voeg witruimte rondom de header toe */
+    background-color: rgba(253, 245, 230, 0.3);
+}
+
+.reverse-colors .header-container {
+    background-color: rgba(81, 85, 65, 0.7); /* Oorspronkelijk rgba(81, 85, 65, 0.3) */
 }
 
 header {
-    height: calc(100vh - 100px); /* Zorgt ervoor dat de header 100vh minus de padding van de container inneemt */
-    border: 3px dashed #FDF5E6; /* Gestippelde rand */
+    height: calc(100vh - 70px); /* Zorgt ervoor dat de header 100vh minus de padding van de container inneemt */
     border-radius: 10px; /* Optioneel: afgeronde hoeken */
     display: flex; /* Maakt het mogelijk om de inhoud te centreren */
     flex-direction: column; /* Zorgt ervoor dat de inhoud onder elkaar staat */
     justify-content: center; /* Centreert de inhoud verticaal */
     align-items: center; /* Centreert de inhoud horizontaal */
     text-align: center; /* Zorgt ervoor dat de tekst gecentreerd is */
-    background-color: #515541; /* Achtergrondkleur van de header */
-    color: #FDF5E6; /* Tekstkleur */
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
     box-sizing: border-box; /* Inclusief padding en border in de hoogte */
     position: relative; /* Voor het positioneren van de afbeelding */
 }
 
-header img {
-    max-width: 40%; /* Zorgt ervoor dat de afbeelding niet breder wordt dan 80% van de header */
-    height: auto; /* Houdt de verhoudingen van de afbeelding intact */
-    margin: 10px 0; /* Voeg wat ruimte toe boven en onder de afbeelding */
+.reverse-colors header{
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 header h2 {
-    font-family: "Antic Didone", serif;
-    color: #FDF5E6;
-    font-size: 3rem;
-    margin: 5px auto;
+    font-family: 'Rondal', sans-serif;
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
+    font-size: 4rem;
+    margin: 0 auto 5px auto; /* Voeg ruimte toe onder de tekst */
+}
+
+.reverse-colors header h1, .reverse-colors header h2 {
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 header p {
-    font-family: "Antic Didone", serif;
-    color: #FDF5E6;
+    font-family: "Outfit", sans-serif; /* Zorgt voor consistentie in de stijl */
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
     font-size: 1.5rem;
-    margin: 3px auto;
+    margin: 0 auto;
     text-transform: uppercase;
+}
+
+.reverse-colors header p {
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 .button {
     margin: 10px 0; /* Voeg wat ruimte boven en onder de knop toe */
     display: inline-block; /* Zorgt ervoor dat de knop correct wordt weergegeven */
     text-align: center; /* Centreert de tekst in de knop */
-    border: 2px solid #515541; /* Randkleur */
-    color: #515541; /* Tekstkleur */
+    border: 2px solid #FDF5E6; /* Oorspronkelijk #515541 */
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
     padding: 10px 30px; /* Binnenruimte van de knop */
     text-decoration: none; /* Verwijdert onderstreping */
-    font-family: "Antic Didone", serif; /* Zorgt voor consistentie in de stijl */
+    font-family: "Outfit", sans-serif; /* Zorgt voor consistentie in de stijl */
     font-size: 1.5rem; /* Pas de tekstgrootte aan */
     border-radius: 5px; /* Maakt de hoeken afgerond */
     transition: background-color 0.5s, color 0.5s, transform 0.1s, box-shadow 0.1s; /* Voeg een animatie toe */
-    background-color: #FDF5E6; /* Transparante achtergrond */
+    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+    box-shadow: 0 7px 0px rgb(253, 245, 230); /* Oorspronkelijk rgb(81, 85, 65) */
+}
+
+body.reverse-colors .button {
+    background-color: #FDF5E6; /* Oorspronkelijk #515541 */
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
+    border: 2px solid #515541; /* Oorspronkelijk #FDF5E6 */
     box-shadow: 0 7px 0px rgb(81, 85, 65);
 }
 
 .button:hover {
-    background-color: #FDF5E6; /* Achtergrondkleur bij hover */
-    color: #515541; /* Tekstkleur bij hover */
+    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
     transform: translateY(3px); /* Laat de knop iets naar beneden bewegen */
-    box-shadow: 0 4px 0px rgb(81, 85, 65);
+    box-shadow: 0 4px 0px rgb(253, 245, 230); /* Oorspronkelijk rgb(81, 85, 65) */
+}
+
+.reverse-colors .button:hover {
+    background-color: #FDF5E6; /* Oorspronkelijk #515541 */
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
+    transform: translateY(3px); /* Laat de knop iets naar beneden bewegen */
+    box-shadow: 0 4px 0px rgb(81, 85, 65); /* Oorspronkelijk rgb(253, 245, 230) */
 }
 
 #locatie .button {
-    background-color: #FDF5E6; /* Achtergrondkleur van de knop */
-    color: #515541; /* Tekstkleur van de knop */
-    border: 1px solid #515541; /* Randkleur van de knop */
+    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
+    border: 1px solid #FDF5E6; /* Oorspronkelijk #515541 */
+    font-family: "Outfit", sans-serif; /* Zorgt voor consistentie in de stijl */
+}
+
+.reverse-colors #locatie .button {
+    background-color: #FDF5E6; /* Oorspronkelijk #515541 */
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
+    border: 1px solid #515541; /* Oorspronkelijk #FDF5E6 */
 }
 
 #locatie .button:hover {
     transform: translateY(3px); /* Laat de knop iets naar beneden bewegen */
-    box-shadow: 0 4px 0px rgb(81, 85, 65);
+    box-shadow: 0 4px 0px rgb(253, 245, 230); /* Oorspronkelijk rgb(81, 85, 65) */
+}
+
+.reverse-colors #locatie .button:hover {
+    transform: translateY(3px); /* Laat de knop iets naar beneden bewegen */
+    box-shadow: 0 4px 0px rgb(81, 85, 65); /* Oorspronkelijk rgb(253, 245, 230) */
 }
 
 .of {
@@ -116,13 +164,17 @@ header p {
     justify-content: center;
     width: 80px;
     height: 80px;
-    background-color: #FDF5E6;
-    color: darkslategrey;
-    border-radius: 50%;
+    background-color: #515541;
+    color: #FDF5E6;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     text-align: center;
+}
+
+.reverse-colors .countdown-item {
+    background-color: #FDF5E6;
+    color: #515541; /* Oorspronkelijk #515541 */
 }
 
 .countdown-item span {
@@ -132,17 +184,30 @@ header p {
 .countdown-item p {
     font-size: 0.6rem;
     margin: 0;
-    color: grey;
+    color: #FDF5E6;
+}
+
+.reverse-colors .countdown-item p{
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
 }
 
 h1 {
-    font-family: "Corinthia", cursive;
-    color: #FDF5E6;
-    margin: 5px auto;
+    font-family: 'Kendra Signature', sans-serif;
+    color: #515541;
+    margin: 0 auto;
+    font-size: 1.5rem; /* Pas de grootte van de titel aan */
+}
+
+.reverse-colors h1{
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 h2 {
-    color: darkslategray;
+    color: #FDF5E6;
+}
+
+.reverse-colors h2 {
+    color: #515541; /* Oorspronkelijk #515541 */
 }
 
 .container {
@@ -152,17 +217,25 @@ h2 {
     display: flex;
     flex-direction: column; /* Standaard: secties onder elkaar */
     gap: 20px;
-    background-color: #515541;
+    background-color: #FDF5E6;
+}
+
+.reverse-colors .container {
+    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
 }
 
 .container-rsvp {
     width: 100%; /* De container neemt de volledige breedte van het scherm */
     margin: 0 auto;
-    padding: 30px 0; /* Alleen verticale padding */
+    padding: 80px 0; /* Alleen verticale padding */
     display: flex;
     flex-direction: row; /* Standaard: secties onder elkaar */
     gap: 20px;
-    background-color: #FDF5E6;
+    background-color: #515541;
+}
+
+.reverse-colors .container-rsvp {
+    background-color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 .container-inner {
@@ -184,18 +257,23 @@ h2 {
 .container-rsvp p {
     display: inline-block;
     margin: 0; /* Verwijdert standaard marges */
-    font-family: "Corinthia", cursive; /* Zorgt voor consistentie in de stijl */
-    font-size: 7rem; /* Pas de tekstgrootte aan */
+    font-family: "Outfit", sans-serif; /* Zorgt voor consistentie in de stijl */
+    font-size: 5rem; /* Pas de tekstgrootte aan */
     font-weight: bold;
-    color: #515541; /* Tekstkleur */
+    text-transform: uppercase;
+    color: #FDF5E6; /* Tekstkleur */
     text-align: right; /* Centreert de tekst */
-    padding: 10px 20px; /* Voeg wat binnenruimte toe */
-    width: 50%;
+    padding: 0 20px; /* Voeg wat binnenruimte toe */
+    width: 60%;
+}
+
+.reverse-colors .container-rsvp p{
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
 }
 
 .container-inner-rsvp-button {
     display: inline-block;
-    width: 50%;
+    width: 40%;
     text-align: center;
     justify-content: left;
     align-content: center;
@@ -205,17 +283,23 @@ section {
     padding: 20px;
     margin: 10px;
     border-radius: 8px;
-    background-color: #FDF5E6;
+    background-color: #515541;
+    color: #FDF5E6;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
+.reverse-colors section {
+    background-color: #FDF5E6;
+    color: #515541; /* Oorspronkelijk #515541 */
+}
+
 section h2 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Outfit", sans-serif;
 }
 
 section p, li {
-    font-family: "Antic Didone", serif;
+    font-family: "Outfit", sans-serif;
 }
 
 .planning {
@@ -254,16 +338,108 @@ section img {
 }
 
 footer {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Outfit", sans-serif;
     text-align: center;
     padding: 10px;
-    background-color: #515541;
-    color: #FDF5E6;
+    background-color: #FDF5E6; /* Oorspronkelijk #515541 */
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
+}
+
+body.reverse-colors footer {
+    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 footer p {
     display: inline-block;
     padding: 10px 0;
+}
+
+.toggle-switch {
+    position: absolute;
+    top: 20px; /* Plaats de schakelaar 20px vanaf de bovenkant */
+    right: 20px; /* Plaats de schakelaar 20px vanaf de rechterkant */
+    z-index: 1000; /* Zorg ervoor dat de schakelaar boven andere elementen staat */
+    width: 50px; /* Breedte van de schakelaar */
+    height: 25px; /* Hoogte van de schakelaar */
+    border: 1px solid #515541; /* Kleur van de rand */
+    border-radius: 25px; /* Maak de schakelaar volledig afgerond */
+    background-color: #FDF5E6; /* Achtergrondkleur van de schakelaar */
+}
+
+.toggle-switch .reverse-colors{
+    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
+}
+
+.toggle-switch input {
+    display: none; /* Verberg de standaard checkbox */
+}
+
+.toggle-switch .slider {
+    position: relative;
+    width: 100%; /* Breedte van de schakelaar */
+    height: 100%; /* Hoogte van de schakelaar */
+    background-color: #515541; /* Achtergrondkleur van de schakelaar */
+    border-radius: 25px; /* Maak de schakelaar volledig afgerond */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.toggle-switch .slider .reverse-colors{
+    background-color: #FDF5E6; 
+}
+
+.toggle-switch .slider::before {
+    content: "";
+    position: absolute;
+    width: 21px; /* Diameter van de cirkel */
+    height: 21px; /* Diameter van de cirkel */
+    background-color: #515541; /* Kleur van de cirkel */
+    border-radius: 50%; /* Maak de cirkel volledig rond */
+    top: 1px; /* Plaats de cirkel binnen de schakelaar */
+    left: 1px; /* Plaats de cirkel aan de linkerkant */
+    transition: transform 0.3s;
+}
+
+.toggle-switch .slider::before .reverse-colors{
+    background-color: #FDF5E6; /* Kleur van de cirkel */
+}
+
+.toggle-switch input:checked + .slider {
+    background-color: #515541; /* Achtergrondkleur bij ingeschakelde modus */
+}
+
+.toggle-switch input:checked + .slider .reverse-colors{
+    background-color: #FDF5E6; /* Achtergrondkleur bij ingeschakelde modus */
+}
+
+.toggle-switch input:checked + .slider::before {
+    transform: translateX(25px); /* Verplaats de cirkel naar rechts */
+    background-color: #515541; /* Kleur van de cirkel bij ingeschakelde modus */
+}
+
+.slideshow {
+    position: relative;
+    width: 100%;
+    height: 55%; /* Stel de hoogte van de slideshow in */
+    overflow: hidden;
+    margin: 10px auto; /* Centreer de slideshow */
+}
+
+.slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover; /* Zorg ervoor dat de afbeelding de container volledig bedekt */
+    opacity: 0; /* Verberg de afbeelding standaard */
+    transition: opacity 1s ease-in-out; /* Voeg een fade-effect toe */
+}
+
+.slideshow .slide.active {
+    opacity: 1; /* Toon de actieve afbeelding */
 }
 
 @media (min-width: 1024px) {

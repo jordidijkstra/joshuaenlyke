@@ -7,18 +7,28 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Antic+Didone&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/kendra-signature" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/rondal" rel="stylesheet">
+                
 </head>
 <body>
+
+    <div class="toggle-switch">
+        <input type="checkbox" id="color-toggle" />
+        <label for="color-toggle" class="slider"></label>
+    </div>
 
     <div id="content-container">
         <div class="header-container">
             <header>
                 <h1>Wij vieren samen!</h1>
                 <h2>Lyke & Joshua</h2>
-                <img src="assets/images/placeholder.jpg" alt="Wedding Celebration">
+                <div class="slideshow">
+                    <div class="slide" style="background-image: url('assets/images/foto1.jpeg'); background-position: bottom;"></div>
+                    <div class="slide" style="background-image: url('assets/images/foto2.jpeg'); background-position: center;"></div>
+                    <div class="slide" style="background-image: url('assets/images/foto3.jpeg'); background-position: 50% 75%;"></div>
+                </div>
                 <p>Zaterdag 12 juli 2025</p>
                 <div id="countdown">
                     <div class="countdown-item">

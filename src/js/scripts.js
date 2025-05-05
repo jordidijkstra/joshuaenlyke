@@ -1,54 +1,75 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Countdown-elementen
     const daysElement = document.getElementById("days");
     const hoursElement = document.getElementById("hours");
     const minutesElement = document.getElementById("minutes");
     const secondsElement = document.getElementById("seconds");
 
-    const weddingDate = new Date("July 12, 2025 15:00:00").getTime();
+    // Controleer of de countdown-elementen bestaan
+    if (daysElement && hoursElement && minutesElement && secondsElement) {
+        const weddingDate = new Date("July 12, 2025 15:00:00").getTime();
 
-    function updateCountdown() {
-        const now = new Date().getTime();
-        const timeLeft = weddingDate - now;
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = weddingDate - now;
 
-        if (timeLeft <= 0) {
-            daysElement.textContent = "0";
-            hoursElement.textContent = "0";
-            minutesElement.textContent = "0";
-            secondsElement.textContent = "0";
-            clearInterval(interval);
-            return;
+            if (timeLeft <= 0) {
+                daysElement.textContent = "0";
+                hoursElement.textContent = "0";
+                minutesElement.textContent = "0";
+                secondsElement.textContent = "0";
+                clearInterval(interval);
+                return;
+            }
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            daysElement.textContent = days;
+            hoursElement.textContent = hours;
+            minutesElement.textContent = minutes;
+            secondsElement.textContent = seconds;
         }
 
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-        daysElement.textContent = days;
-        hoursElement.textContent = hours;
-        minutesElement.textContent = minutes;
-        secondsElement.textContent = seconds;
+        // Start de countdown
+        const interval = setInterval(updateCountdown, 1000);
+        updateCountdown();
+    } else {
+        console.error("Countdown-elementen niet gevonden in de HTML.");
     }
 
-    const interval = setInterval(updateCountdown, 1000);
-    updateCountdown();
-});
+    // Slideshow-elementen
+    const slides = document.querySelectorAll('.slideshow .slide');
+    let currentIndex = 0;
 
-document.getElementById("login-form").addEventListener("submit", function (e) {
-    e.preventDefault(); // Voorkom standaard formulierverzending
+    function showNextSlide() {
+        // Verberg de huidige slide
+        slides[currentIndex].classList.remove('active');
 
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
+        // Bereken de volgende slide
+        currentIndex = (currentIndex + 1) % slides.length;
 
-    // Simpele loginlogica
-    if (username === "trouwgast" && password === "test123") {
-        document.getElementById("login-container").style.display = "none";
-        document.getElementById("content-container").style.display = "block";
-    } else if (username === "trouwgast" && password === "123test") {
-        document.getElementById("login-container").style.display = "none";
-        document.getElementById("content-container").style.display = "block";
+        // Toon de volgende slide
+        slides[currentIndex].classList.add('active');
+    }
+
+    // Start de slideshow
+    if (slides.length > 0) {
+        slides[currentIndex].classList.add('active'); // Toon de eerste slide
+        setInterval(showNextSlide, 3000); // Wissel elke 3 seconden
     } else {
-        const error = document.getElementById("login-error");
-        error.style.display = "block"; // Toon foutmelding
+        console.error("Geen slides gevonden in de slideshow.");
+    }
+
+    // Toggle switch voor kleuren
+    const toggleSwitch = document.getElementById('color-toggle');
+    if (toggleSwitch) {
+        toggleSwitch.addEventListener('change', function () {
+            document.body.classList.toggle('reverse-colors', toggleSwitch.checked);
+        });
+    } else {
+        console.error("Toggle switch niet gevonden in de HTML.");
     }
 });
