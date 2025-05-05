@@ -160,7 +160,7 @@ body.reverse-colors .button {
     background-color: #515541;
     color: #FDF5E6;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    font-family: "Montserrat", sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: bold;
     text-align: center;
 }
@@ -439,6 +439,23 @@ footer p {
     transform: scale(1.1); /* Vergroot de knop iets bij hover */
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Versterk de schaduw bij hover */
 }
+
+.logo-container {
+    position: absolute;
+    top: 20px; /* Plaats het logo 20px vanaf de bovenkant */
+    left: 20px; /* Plaats het logo 20px vanaf de linkerkant */
+    width: 80px; /* Breedte van het logo-kader */
+    height: 80px; /* Hoogte van het logo-kader */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Zorg ervoor dat het logo boven andere elementen staat */
+    font-family: 'Rondal', sans-serif;
+    font-size: 1.5rem; /* Pas de tekstgrootte aan */
+    line-height: 0.7;
+}
+
+
 
 @media (min-width: 1024px) {
     .container-inner {
