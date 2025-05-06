@@ -498,7 +498,7 @@ footer p {
     stroke-width: 7; /* Dikte van de lijn */
     stroke-dasharray: 1000; /* Zorg ervoor dat het pad volledig is onderbroken */
     stroke-dashoffset: 1000; /* Begin met een volledig verborgen pad */
-    animation: draw 4s ease-in-out 0.5s; /* Voer de animatie uit */
+    animation: draw 3s ease-in-out 0.5s; /* Voer de animatie uit */
 }
 
 @keyframes draw {
