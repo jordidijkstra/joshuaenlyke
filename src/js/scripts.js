@@ -83,6 +83,6 @@ window.addEventListener("load", () => {
             loadingOverlay.addEventListener("transitionend", () => {
                 loadingOverlay.style.display = "none"; // Verberg de overlay volledig na de transitie
             });
-        }, 3000); // Wacht tot de animatie van het logo is voltooid
+        }, 4500); // Wacht tot de animatie van het logo is voltooid
     }
 });

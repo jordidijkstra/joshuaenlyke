@@ -485,6 +485,7 @@ footer p {
     z-index: 9999; /* Zorg ervoor dat de overlay boven alles staat */
     opacity: 1; /* Begin volledig zichtbaar */
     transition: opacity 1s ease-out; /* Voeg een fade-out transitie toe */
+    transform: translateZ(0); /* Forceer hardwareversnelling */
 }
 
 .loading-svg {
@@ -495,10 +496,10 @@ footer p {
 .loading-path {
     fill: none; /* Zorg ervoor dat het pad niet gevuld is */
     stroke: #515541; /* Kleur van de lijn */
-    stroke-width: 8; /* Dikte van de lijn */
+    stroke-width: 7; /* Dikte van de lijn */
     stroke-dasharray: 1000; /* Zorg ervoor dat het pad volledig is onderbroken */
     stroke-dashoffset: 1000; /* Begin met een volledig verborgen pad */
-    animation: draw 3s ease-in-out; /* Voer de animatie uit */
+    animation: draw 4s ease-in-out 0.5s; /* Voer de animatie uit */
 }
 
 @keyframes draw {
@@ -636,6 +637,22 @@ footer p {
         text-align: center; /* Centreert de tekst */
         padding: 10px 20px; /* Voeg wat binnenruimte toe */
         width: 90%;
+    }
+
+    #loading-overlay {
+        position: absolute; /* Gebruik absolute positionering als fallback */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 20px; /* Voeg wat padding toe rond de overlay */
+        justify-content: center; /* Zorg ervoor dat de SVG gecentreerd blijft */
+        align-items: center;
+    }
+
+    .loading-svg {
+        width: 150px; /* Verklein de SVG voor kleinere schermen */
+        height: 150px; /* Zorg ervoor dat de hoogte overeenkomt met de breedte */
     }
     
 }
