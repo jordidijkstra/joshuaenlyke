@@ -484,7 +484,7 @@ footer p {
     align-items: center;
     z-index: 9999; /* Zorg ervoor dat de overlay boven alles staat */
     opacity: 1; /* Begin volledig zichtbaar */
-    transition: opacity 0.5s ease-out; /* Voeg een fade-out transitie toe */
+    transition: opacity 1s ease-out; /* Voeg een fade-out transitie toe */
 }
 
 .loading-svg {
