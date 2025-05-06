@@ -73,3 +73,16 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Toggle switch niet gevonden in de HTML.");
     }
 });
+
+window.addEventListener("load", () => {
+    const loadingOverlay = document.getElementById("loading-overlay");
+
+    if (loadingOverlay) {
+        setTimeout(() => {
+            loadingOverlay.style.opacity = "0"; // Start de fade-out van de overlay
+            loadingOverlay.addEventListener("transitionend", () => {
+                loadingOverlay.style.display = "none"; // Verberg de overlay volledig na de transitie
+            });
+        }, 3000); // Wacht tot de animatie van het logo is voltooid
+    }
+});
