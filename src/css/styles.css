@@ -363,6 +363,13 @@ section ul {
     opacity: 1;
 }
 
+/* Tooltip zichtbaar maken bij hover of focus */
+.parking:hover .tooltip,
+.parking:focus .tooltip {
+    visibility: visible;
+    opacity: 1; /* Maak de tooltip zichtbaar */
+}
+
 footer {
     font-family: "Outfit", sans-serif;
     text-align: center;
