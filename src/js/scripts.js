@@ -72,6 +72,13 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
         console.error("Toggle switch niet gevonden in de HTML.");
     }
+
+    // Parking-elementen
+    document.querySelectorAll('.parking').forEach(parking => {
+        parking.addEventListener('click', () => {
+            parking.classList.toggle('show-tooltip');
+        });
+    });
 });
 
 window.addEventListener("load", () => {
