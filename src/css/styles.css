@@ -63,7 +63,7 @@ header h2 {
 header p {
     font-family: "Outfit", sans-serif; /* Zorgt voor consistentie in de stijl */
     color: #515541; /* Oorspronkelijk #FDF5E6 */
-    font-size: 2rem;
+    font-size: 1.7rem;
     margin: 0 auto;
     text-transform: uppercase;
 }
@@ -647,6 +647,7 @@ footer p {
     }
 
     .container-inner {
+        flex-direction: column;
         width: 100%; /* Zorg ervoor dat de container de volledige breedte gebruikt */
         gap: 15px; /* Verminder de ruimte tussen secties */
     }
