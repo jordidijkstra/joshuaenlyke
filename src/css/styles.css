@@ -1,10 +1,3 @@
-@font-face {
-    font-family: 'rondal-regular'; /* Geef het font een naam */
-    src: url('../assets/fonts/Rondal-Regular.otf') format('otf'); /* Pad naar het .woff2-bestand */
-    font-weight: normal; /* Optioneel: specificeer het gewicht */
-    font-style: normal;  /* Optioneel: specificeer de stijl */
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -52,7 +45,7 @@ header {
     position: relative; /* Voor het positioneren van de afbeelding */
 }
 
-.reverse-colors header{
+.reverse-colors header {
     color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
@@ -70,7 +63,7 @@ header h2 {
 header p {
     font-family: "Outfit", sans-serif; /* Zorgt voor consistentie in de stijl */
     color: #515541; /* Oorspronkelijk #FDF5E6 */
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0 auto;
     text-transform: uppercase;
 }
@@ -155,8 +148,8 @@ body.reverse-colors .button {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background-color: #515541;
     color: #FDF5E6;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -180,7 +173,7 @@ body.reverse-colors .button {
     color: #FDF5E6;
 }
 
-.reverse-colors .countdown-item p{
+.reverse-colors .countdown-item p {
     color: #515541; /* Oorspronkelijk #FDF5E6 */
 }
 
@@ -191,7 +184,7 @@ h1 {
     font-size: 1.5rem; /* Pas de grootte van de titel aan */
 }
 
-.reverse-colors h1{
+.reverse-colors h1 {
     color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
@@ -219,13 +212,15 @@ h1 {
 }
 
 .container-inner {
-    width: 70%; /* Zorgt ervoor dat de inhoud dezelfde breedte heeft als de header */
+    display: flex; /* Activeer Flexbox */
+    flex-direction: row; /* Plaats de secties naast elkaar */
+    justify-content: space-between; /* Voeg ruimte toe tussen de secties */
+    align-items: stretch; /* Zorg ervoor dat de secties dezelfde hoogte hebben */
+    gap: 20px; /* Voeg ruimte toe tussen de secties */
+    flex-wrap: wrap; /* Zorg ervoor dat secties naar een nieuwe regel gaan als er geen ruimte is */
+    width: 80%;
     margin: 0 auto; /* Centreert de inhoud binnen de container */
-    display: flex;
-    flex-direction: column; /* Standaard: secties onder elkaar */
-    justify-content: center;
-    align-items: center;
-    padding: 30px 0; /* Alleen verticale padding */
+    padding: 20px 0;
 }
 
 .container-inner-rsvp {
@@ -244,33 +239,47 @@ h1 {
     width: 100%;
 }
 
-.reverse-colors .container-rsvp p{
+.reverse-colors .container-rsvp p {
     color: #515541; /* Oorspronkelijk #FDF5E6 */
 }
 
 section {
+    flex: 1; /* Zorg ervoor dat secties gelijke breedte hebben */
+    min-width: 30%; /* Stel een minimale breedte in voor responsiviteit */
+    max-width: 100%; /* Zorg ervoor dat secties niet groter worden dan de container */
+    margin: 10px;
     padding: 50px 0;
-    margin: 10px 0;
     background-color: #515541;
     color: #FDF5E6;
     text-align: center;
-    max-width: 40%;
-    border:2px solid #FDF5E6; /* Oorspronkelijk #515541 */
+    border: 2px solid #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 .reverse-colors section {
     background-color: #FDF5E6;
     color: #515541; /* Oorspronkelijk #515541 */
-    border:2px solid #515541;
+    border: 2px solid #515541;
 }
 
 section h2 {
     font-family: "Outfit", sans-serif;
-    padding-top: 20px;
-    height: 30%;
+    padding: 20px 0;
 }
 
-section p, li {
+section a, section a:active {
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
+    text-decoration: none; /* Verwijder onderstreping */
+}
+
+.cadeautip a:hover {
+    text-decoration: underline; /* Voeg onderstreping toe bij hover */
+}
+
+.reverse-colors section a, .reverse-colors section a:active {
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
+}
+
+section p, li, a {
     font-family: "Outfit", sans-serif;
 }
 
@@ -279,6 +288,10 @@ section p, li {
     flex-direction: column; /* Zorg ervoor dat de inhoud onder elkaar staat */
     justify-content: center; /* Centreer de inhoud verticaal */
     align-items: center;
+}
+
+.cadeautip p, .cadeautip h2{
+    padding: 10px 0;
 }
 
 section li {
@@ -297,6 +310,57 @@ section ul {
     gap: 10px;
     height: 70%;
     line-height: 1.5;
+}
+
+.parking {
+    padding: 20px 0;
+    position: relative; /* Zorg ervoor dat de tooltip relatief is aan de parent */
+    display: inline-block;
+}
+
+.parking:hover{
+    cursor: pointer; /* Verander de cursor naar een pointer bij hover */
+}
+
+.parking .tooltip {
+    visibility: hidden; /* Verberg de tooltip standaard */
+    width: 250px; /* Breedte van de tooltip */
+    background-color: #FDF5E6; /* Achtergrondkleur van de tooltip */
+    color: #515541 ; /* Tekstkleur van de tooltip */
+    text-align: center;
+    padding: 10px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: -75%; /* Plaats de tooltip boven de tekst */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    opacity: 0; /* Begin met een onzichtbare tooltip */
+    transition: opacity 0.3s; /* Voeg een fade-in effect toe */
+}
+
+/* Pijltje onder de tooltip */
+.parking .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 0; /* Plaats het pijltje onder de tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: #515541 transparent transparent transparent; /* Pijltje met dezelfde kleur als de achtergrond */
+}
+
+/* Tooltip zichtbaar maken bij hover */
+.parking:hover .tooltip {
+    visibility: visible;
+    opacity: 1; /* Maak de tooltip zichtbaar */
+}
+
+/* Tooltip zichtbaar maken bij focus */
+.parking:focus .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 footer {
@@ -329,7 +393,7 @@ footer p {
     background-color: #FDF5E6; /* Achtergrondkleur van de schakelaar */
 }
 
-.toggle-switch .reverse-colors{
+.toggle-switch .reverse-colors {
     background-color: #515541; /* Oorspronkelijk #FDF5E6 */
     color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
@@ -348,8 +412,8 @@ footer p {
     transition: background-color 0.3s;
 }
 
-.toggle-switch .slider .reverse-colors{
-    background-color: #FDF5E6; 
+.toggle-switch .slider .reverse-colors {
+    background-color: #FDF5E6;
 }
 
 .toggle-switch .slider::before {
@@ -364,7 +428,7 @@ footer p {
     transition: transform 0.3s;
 }
 
-.toggle-switch .slider::before .reverse-colors{
+.toggle-switch .slider::before .reverse-colors {
     background-color: #FDF5E6; /* Kleur van de cirkel */
 }
 
@@ -372,7 +436,7 @@ footer p {
     background-color: #515541; /* Achtergrondkleur bij ingeschakelde modus */
 }
 
-.toggle-switch input:checked + .slider .reverse-colors{
+.toggle-switch input:checked + .slider .reverse-colors {
     background-color: #FDF5E6; /* Achtergrondkleur bij ingeschakelde modus */
 }
 
@@ -422,11 +486,11 @@ footer p {
     transition: transform 0.2s, box-shadow 0.2s; /* Voeg een hover-effect toe */
 }
 
-.waze{
+.waze {
     background-color: lightskyblue; /* Achtergrondkleur van de knop */
 }
 
-.maps{
+.maps {
     background-color: white; /* Achtergrondkleur van de knop */
 }
 
@@ -456,7 +520,7 @@ footer p {
     line-height: 1;
 }
 
-.logo-container p{
+.logo-container p {
     display: block;
     width: 100%;
     text-align: center;
@@ -501,12 +565,19 @@ footer p {
     animation: draw 4s ease-in-out 0.5s forwards; /* Voer de animatie uit */
 }
 
+.dotInside{
+    stroke-width: 3;
+}
+
+.dot{
+    stroke-width: 5;
+}
+
 @keyframes draw {
     to {
         stroke-dashoffset: 0; /* Teken het volledige pad */
     }
 }
-
 
 @media (min-width: 1024px) {
     .container-inner {
@@ -628,7 +699,7 @@ footer p {
     .countdown-item p {
         font-size: 0.5rem; /* Maak de tekst onder de cijfers kleiner */
     }
-    
+
     .container-rsvp p {
         display: block;
         margin: 0 auto; /* Verwijdert standaard marges */
@@ -653,5 +724,4 @@ footer p {
         width: 150px; /* Verklein de SVG voor kleinere schermen */
         height: 150px; /* Zorg ervoor dat de hoogte overeenkomt met de breedte */
     }
-    
 }
