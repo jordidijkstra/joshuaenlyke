@@ -370,6 +370,10 @@ section ul {
     opacity: 1; /* Maak de tooltip zichtbaar */
 }
 
+.mobile-only {
+    display: none;
+}
+
 footer {
     font-family: "Outfit", sans-serif;
     text-align: center;
@@ -672,6 +676,10 @@ footer p {
 
     section ul li {
         font-size: 1rem; /* Pas de tekstgrootte van lijstitems aan */
+    }
+
+    .mobile-only {
+        display: inline-block;
     }
 
     footer p {
