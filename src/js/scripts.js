@@ -92,15 +92,24 @@ document.addEventListener('click', (event) => {
 window.addEventListener("load", () => {
     const loadingOverlay = document.getElementById("loading-overlay");
 
+    // Voeg de no-scrollbar-klasse toe aan <html> en <body>
+    document.documentElement.classList.add("no-scrollbar");
+    document.body.classList.add("no-scrollbar");
+
     if (loadingOverlay) {
         setTimeout(() => {
-
+            // Verwijder de no-scrollbar-klasse om scrollen weer in te schakelen
+            document.documentElement.classList.remove("no-scrollbar");
+            document.body.classList.remove("no-scrollbar");
             // Start de fade-out van de overlay
             loadingOverlay.style.opacity = "0";
+
+            // Wacht tot de fade-out transitie is voltooid
             loadingOverlay.addEventListener("transitionend", () => {
-                // Verberg de overlay volledig na de transitie
+                // Verberg de overlay volledig
                 loadingOverlay.style.display = "none";
+
             });
-        }, 4000); // Wacht tot de animatie van het logo is voltooid
+        }, 4500); // Wacht tot de animatie van het logo is voltooid
     }
 });
