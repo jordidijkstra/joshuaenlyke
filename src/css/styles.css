@@ -654,7 +654,7 @@ footer p {
     }
 
     header h2 {
-        font-size: 1rem; /* Pas de grootte van de subtitel aan */
+        font-size: 2rem; /* Pas de grootte van de subtitel aan */
         margin-bottom: 5px;
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
@@ -663,7 +663,7 @@ footer p {
     }
 
     header p {
-        font-size: 0.75rem; /* Pas de grootte van de tekst aan */
+        font-size: 1.5rem; /* Pas de grootte van de tekst aan */
         margin-bottom: 5px; /* Voeg ruimte toe onder de tekst */
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
@@ -686,6 +686,7 @@ footer p {
         padding: 15px; /* Verminder de padding binnen secties */
         max-width: none;
         width: 90%;
+        margin: 0 auto; /* Centreer de secties */
     }
 
     section img {
@@ -733,15 +734,8 @@ footer p {
 
     .countdown-item p {
         font-size: 0.5rem; /* Maak de tekst onder de cijfers kleiner */
-    }
-
-    .container-rsvp p {
-        display: block;
-        margin: 0 auto; /* Verwijdert standaard marges */
-        font-size: 2rem; /* Pas de tekstgrootte aan */
-        text-align: center; /* Centreert de tekst */
-        padding: 10px 20px; /* Voeg wat binnenruimte toe */
-        width: 90%;
+        margin: 0; /* Verwijder de marge */
+        width: 100%; /* Zorg ervoor dat de tekst de volledige breedte gebruikt */
     }
 
     #loading-overlay {

@@ -110,6 +110,6 @@ window.addEventListener("load", () => {
                 loadingOverlay.style.display = "none";
 
             });
-        }, 4500); // Wacht tot de animatie van het logo is voltooid
+        }, 4000); // Wacht tot de animatie van het logo is voltooid
     }
 });
