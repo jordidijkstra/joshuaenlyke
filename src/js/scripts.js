@@ -81,14 +81,25 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+document.addEventListener('click', (event) => {
+    document.querySelectorAll('.parking').forEach(parking => {
+        if (!parking.contains(event.target)) {
+            parking.classList.remove('show-tooltip');
+        }
+    });
+});
+
 window.addEventListener("load", () => {
     const loadingOverlay = document.getElementById("loading-overlay");
 
     if (loadingOverlay) {
         setTimeout(() => {
-            loadingOverlay.style.opacity = "0"; // Start de fade-out van de overlay
+
+            // Start de fade-out van de overlay
+            loadingOverlay.style.opacity = "0";
             loadingOverlay.addEventListener("transitionend", () => {
-                loadingOverlay.style.display = "none"; // Verberg de overlay volledig na de transitie
+                // Verberg de overlay volledig na de transitie
+                loadingOverlay.style.display = "none";
             });
         }, 4000); // Wacht tot de animatie van het logo is voltooid
     }
