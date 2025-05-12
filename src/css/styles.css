@@ -614,13 +614,13 @@ footer p {
     margin: 0 auto;
     text-align: center;
     padding: 40px 0;
-    background-color: #FDF5E6;
-    color: #515541;
+    background-color:#515541;
+    color: #FDF5E6;
 }
 
 .reverse-colors .quote {
-    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
-    color: #FDF5E6; /* Oorspronkelijk #515541 */
+    background-color: #FDF5E6; /* Oorspronkelijk #FDF5E6 */
+    color: #515541; /* Oorspronkelijk #515541 */
 }
 
 .quote h3{
@@ -631,7 +631,6 @@ footer p {
 }
 
 .left-align {
-    padding-top: 80px;
     text-align: left; /* Zorg ervoor dat de tekst links uitgelijnd is */
     width: 100%; /* Zorg ervoor dat de tekst de volledige breedte gebruikt */
     padding-right: 50%; /* Voeg padding toe aan de rechterkant voor ruimte */
@@ -645,25 +644,11 @@ footer p {
 
 /* Algemene styling voor de content-blok */
 .container-over-ons{
-    position: relative; /* Zorg ervoor dat de quote zich binnen deze container positioneert */
     padding: 0;
     margin: 0 auto; /* Centreer de container */
 }
 
-.quote {
-    position: absolute; /* Maak de quote absoluut gepositioneerd */
-    top: 100px; /* Plaats de quote halverwege de container */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Centreer de quote horizontaal en verticaal */
-    background-color: #FDF5E6; /* Voeg een semi-transparante achtergrond toe */
-    color: #515541; /* Tekstkleur */
-    padding: 20px;
-    z-index: 10; /* Zorg ervoor dat de quote boven de content-block staat */
-    text-align: center;
-}
-
 .content-block {
-    position: relative; /* Zorg ervoor dat de content-block niet wordt beïnvloed door de absolute positionering van de quote */
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -671,7 +656,6 @@ footer p {
     border: 0;
     padding: 0;
     margin: 0;
-    margin-top: 100px; /* Voeg wat ruimte toe zodat de overlap visueel aantrekkelijk is */
 }
 
 .column {
@@ -685,13 +669,14 @@ footer p {
 }
 
 .column p{
-    background-color: #515541;
-    color: #FDF5E6;
     padding: 10px;
     font-size: 1rem;
     font-weight: 100;
     margin: 10px;
     max-width: 90%;
+    background-color: #515541;
+    color: #FDF5E6;
+    line-height: 1.5;
 }
 
 .reverse-colors .column {
