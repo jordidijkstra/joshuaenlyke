@@ -613,7 +613,7 @@ footer p {
 .quote{
     margin: 0 auto;
     text-align: center;
-    padding: 40px 0;
+    padding: 20px 0;
     background-color:#515541;
     color: #FDF5E6;
 }
@@ -672,11 +672,14 @@ footer p {
     padding: 10px;
     font-size: 1rem;
     font-weight: 100;
-    margin: 10px;
     max-width: 90%;
     background-color: #515541;
     color: #FDF5E6;
     line-height: 1.5;
+}
+
+.overOns{
+    padding-bottom: 20px;
 }
 
 .reverse-colors .column {
@@ -709,7 +712,6 @@ footer p {
     background-image: url('../assets/images/bgRing.jpeg'); /* Vervang door het pad naar je afbeelding */
     background-size: cover; /* Zorg ervoor dat de afbeelding de container volledig bedekt */
     background-position: center; /* Centreer de afbeelding */
-    background-attachment: fixed;
     background-repeat: no-repeat; /* Voorkom dat de afbeelding herhaald wordt */
     width: 100%; /* Zorg ervoor dat de container de volledige breedte gebruikt */
     height: 25vh; /* Stel een vaste hoogte in (pas aan naar wens) */
