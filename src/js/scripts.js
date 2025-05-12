@@ -90,7 +90,10 @@ document.addEventListener('click', (event) => {
 });
 
 window.addEventListener("load", () => {
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
     const loadingOverlay = document.getElementById("loading-overlay");
+    const contentContainer = document.getElementById("content-container");
 
     // Voeg de no-scrollbar-klasse toe aan <html> en <body>
     document.documentElement.classList.add("no-scrollbar");
@@ -98,16 +101,20 @@ window.addEventListener("load", () => {
 
     if (loadingOverlay) {
         setTimeout(() => {
-            // Verwijder de no-scrollbar-klasse om scrollen weer in te schakelen
-            document.documentElement.classList.remove("no-scrollbar");
-            document.body.classList.remove("no-scrollbar");
             // Start de fade-out van de overlay
             loadingOverlay.style.opacity = "0";
+
+            // Begin de fade-in van de content terwijl de overlay uitfadet
+            contentContainer.classList.add("loaded");
 
             // Wacht tot de fade-out transitie is voltooid
             loadingOverlay.addEventListener("transitionend", () => {
                 // Verberg de overlay volledig
                 loadingOverlay.style.display = "none";
+
+                // Verwijder de no-scrollbar-klasse om scrollen weer in te schakelen
+                document.documentElement.classList.remove("no-scrollbar");
+                document.body.classList.remove("no-scrollbar");
 
             });
         }, 4000); // Wacht tot de animatie van het logo is voltooid

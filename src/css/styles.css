@@ -22,6 +22,7 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
+    transition: padding-right 0.3s ease; /* Zorg voor een soepele overgang */
     background-color: #FDF5E6; /* Oorspronkelijk #515541 */
     color: #515541;
     background: url('../assets/images/logoTransparant.png') no-repeat center center fixed; /* Voeg de achtergrondafbeelding toe */
@@ -79,16 +80,6 @@ header p {
 
 .reverse-colors header p {
     color: #FDF5E6; /* Oorspronkelijk #515541 */
-}
-
-.green{
-    background-color: green;
-    color: #FDF5E6;
-}
-
-.red{
-    background-color: red;
-    color: #FDF5E6;
 }
 
 .default{
@@ -163,6 +154,7 @@ h1 {
     display: flex;
     flex-direction: column; /* Standaard: secties onder elkaar */
     background-color: rgb(81, 85, 65);
+    padding: 20px 0;
 }
 
 .reverse-colors .container {
@@ -554,7 +546,7 @@ footer p {
     overflow: hidden; /* Verberg eventuele overflow */
     z-index: 9999; /* Zorg ervoor dat de overlay boven alles staat */
     opacity: 1; /* Begin volledig zichtbaar */
-    transition: opacity 1s ease-out; /* Voeg een fade-out transitie toe */
+    transition: opacity 2s ease-in-out; /* Voeg een fade-out transitie toe */
 }
 
 .loading-svg {
@@ -585,6 +577,15 @@ footer p {
     }
 }
 
+#content-container {
+    opacity: 0; /* Begin met onzichtbare content */
+    transition: opacity 2s ease-in-out; /* Zorg voor een soepele fade-in */
+}
+
+#content-container.loaded {
+    opacity: 1; /* Maak de content zichtbaar */
+}
+
 /* Algemene scrollbar-styling */
 ::-webkit-scrollbar {
     width: 12px; /* Breedte van de scrollbar */
@@ -607,6 +608,87 @@ footer p {
 /* Hover-effect voor de scrollbar */
 ::-webkit-scrollbar-thumb:hover {
     background: #6b6e5c; /* Verander de kleur bij hover */
+}
+
+.container-quote{
+    background-color: #FDF5E6;
+    color: #515541;
+}
+
+.quote{
+    margin: 0 auto;
+    text-align: center;
+    max-width: 90%;
+    padding: 40px 0;
+}
+
+.reverse-colors .container-quote {
+    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
+}
+
+.quote h3{
+    font-size: 3rem;
+    font-family: 'Rondal', sans-serif;
+}
+
+/* Algemene styling voor de content-blok */
+.container-content{
+    padding: 0;
+}
+
+.content-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 20px;
+    border: 0;
+    padding: 0;
+}
+
+
+.column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FDF5E6; /* Tekstkleur */
+}
+
+.column p{
+    background-color: #FDF5E6;
+    color: #515541;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+}
+
+.reverse-colors .column {
+    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
+}
+
+/* Linker- en rechterkolom met groene achtergrond */
+.column-left, .column-right {
+    background-color: #515541; /* Groen */
+}
+
+/* Achtergrondkleur aanpassen bij reverse-color */
+.reverse-colors .column-left, 
+.reverse-colors .column-right {
+    background-color: #FDF5E6; /* Wit */
+    color: #515541; /* Tekstkleur aanpassen */
+}
+
+/* Middelste kolom met achtergrondafbeelding */
+.column-center {
+    background-image: url('../assets/images/backgroundImageOverOns.jpeg'); /* Vervang door je afbeelding */
+    background-size: cover;
+    background-position: -150px center;
+    min-height: 100vh;
+    max-width: 20%;
 }
 
 @media (min-width: 1024px) {
@@ -758,3 +840,4 @@ footer p {
         height: 150px; /* Zorg ervoor dat de hoogte overeenkomt met de breedte */
     }
 }
+
