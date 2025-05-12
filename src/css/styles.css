@@ -705,6 +705,17 @@ footer p {
     max-width: 40%;
 }
 
+.container-ring {
+    background-image: url('../assets/images/bgRing.jpeg'); /* Vervang door het pad naar je afbeelding */
+    background-size: cover; /* Zorg ervoor dat de afbeelding de container volledig bedekt */
+    background-position: center; /* Centreer de afbeelding */
+    background-attachment: fixed;
+    background-repeat: no-repeat; /* Voorkom dat de afbeelding herhaald wordt */
+    width: 100%; /* Zorg ervoor dat de container de volledige breedte gebruikt */
+    height: 25vh; /* Stel een vaste hoogte in (pas aan naar wens) */
+}
+
+
 @media (min-width: 1024px) {
     .container-inner {
         flex-direction: row; /* Plaatst secties naast elkaar */
