@@ -614,13 +614,13 @@ footer p {
     margin: 0 auto;
     text-align: center;
     padding: 20px 0;
-    background-color:#515541;
-    color: #FDF5E6;
+    background-color:#FDF5E6;
+    color: #515541;
 }
 
 .reverse-colors .quote {
-    background-color: #FDF5E6; /* Oorspronkelijk #FDF5E6 */
-    color: #515541; /* Oorspronkelijk #515541 */
+    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+    color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 .quote h3{
@@ -649,6 +649,7 @@ footer p {
 }
 
 .content-block {
+    background-color: #FDF5E6;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -658,6 +659,10 @@ footer p {
     margin: 0;
 }
 
+.reverse-colors .content-block {
+    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+}
+
 .column {
     flex: 1;
     display: flex;
@@ -665,7 +670,8 @@ footer p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #FDF5E6; /* Tekstkleur */
+    color: #515541; /* Tekstkleur */
+    background-color: #FDF5E6;
 }
 
 .column p{
@@ -673,8 +679,6 @@ footer p {
     font-size: 1rem;
     font-weight: 100;
     max-width: 90%;
-    background-color: #515541;
-    color: #FDF5E6;
     line-height: 1.5;
 }
 
@@ -687,18 +691,6 @@ footer p {
     color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
-/* Linker- en rechterkolom met groene achtergrond */
-.column-left, .column-right {
-    background-color: #515541; /* Groen */
-}
-
-/* Achtergrondkleur aanpassen bij reverse-color */
-.reverse-colors .column-left, 
-.reverse-colors .column-right {
-    background-color: #FDF5E6; /* Wit */
-    color: #515541; /* Tekstkleur aanpassen */
-}
-
 /* Middelste kolom met achtergrondafbeelding */
 .column-left {
     background-image: url('../assets/images/backgroundImageOverOns.jpeg'); /* Vervang door je afbeelding */
@@ -706,7 +698,9 @@ footer p {
     background-position: center;
     min-height: 80vh;
     max-width: 40%;
+    border-radius: 0 50% 0 0;
 }
+
 
 .container-ring {
     background-image: url('../assets/images/bgRing.jpeg'); /* Vervang door het pad naar je afbeelding */
