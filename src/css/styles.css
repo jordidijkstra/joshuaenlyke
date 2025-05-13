@@ -138,10 +138,10 @@ header p {
 }
 
 h1 {
-    font-family: 'Kendra Signature', "Corinthia", sans-serif;
+    font-family: 'Rufina Signature', "Corinthia", sans-serif;
     color: #515541;
     margin: 0 auto;
-    font-size: 2.5rem; /* Pas de grootte van de titel aan */
+    font-size: 1.8rem; /* Pas de grootte van de titel aan */
 }
 
 .reverse-colors h1 {
@@ -192,7 +192,7 @@ h1 {
 .container-rsvp p {
     display: block;
     margin: 0; /* Verwijdert standaard marges */
-    font-family: 'Kendra Signature', "Corinthia", sans-serif; /* Zorgt voor consistentie in de stijl */
+    font-family: 'Rufina Signature', "Corinthia", sans-serif; /* Zorgt voor consistentie in de stijl */
     font-size: 4rem; /* Pas de tekstgrootte aan */
     font-weight: bold;
     color: #FDF5E6; /* Tekstkleur */
@@ -213,7 +213,7 @@ section {
     background-color: #515541;
     color: #FDF5E6;
     text-align: center;
-    border: 2px solid #FDF5E6; /* Oorspronkelijk #515541 */
+    border: 1px solid #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 .reverse-colors section {
@@ -258,6 +258,18 @@ section p{
 .cadeautip a {
     color: #FDF5E6; /* Oorspronkelijk #515541 */
     text-decoration: none; /* Verwijder de standaard onderstreping */
+}
+
+.anekdotes a{
+    background-color: #FDF5E6;
+    color: #515541; /* Oorspronkelijk #515541 */
+    text-decoration: none; /* Verwijder de standaard onderstreping */
+    margin: 10px auto; /* Centreer de tekst */
+}
+
+.reverse-colors .anekdotes a {
+    background-color: #515541;
+    color: #FDF5E6; /* Oorspronkelijk #FDF5E6 */
 }
 
 .reverse-colors .cadeautip a {
@@ -620,8 +632,8 @@ footer p {
 
 .quote h3{
     font-size: 1.5rem;
-    font-family: 'Kendra Signature', "Corinthia", sans-serif;/* Zorgt voor consistentie in de stijl */
-    max-width: 50%;
+    font-family: 'Rufina Signature', "Corinthia", sans-serif;/* Zorgt voor consistentie in de stijl */
+    max-width: 70%;
     margin: 0 auto; /* Centreer de tekst */
 }
 
