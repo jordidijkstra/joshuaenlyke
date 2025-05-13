@@ -71,11 +71,10 @@ header h2 {
 }
 
 header p {
-    font-family: "Outfit", sans-serif; /* Zorgt voor consistentie in de stijl */
+    font-family: 'Rondal', sans-serif; /* Zorgt voor consistentie in de stijl *//* Zorgt voor consistentie in de stijl */
     color: #515541; /* Oorspronkelijk #FDF5E6 */
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     margin: 0 auto;
-    text-transform: uppercase;
 }
 
 .reverse-colors header p {
@@ -131,6 +130,7 @@ header p {
     font-size: 0.6rem;
     margin: 0;
     color: #FDF5E6;
+    font-family: 'Outfit', serif; /* Zorgt voor consistentie in de stijl */
 }
 
 .reverse-colors .countdown-item p {
@@ -141,7 +141,7 @@ h1 {
     font-family: 'Kendra Signature', "Corinthia", sans-serif;
     color: #515541;
     margin: 0 auto;
-    font-size: 1.5rem; /* Pas de grootte van de titel aan */
+    font-size: 2.5rem; /* Pas de grootte van de titel aan */
 }
 
 .reverse-colors h1 {
@@ -301,7 +301,7 @@ section ul {
     padding: 10px;
     border-radius: 5px;
     position: absolute;
-    bottom: -75%; /* Plaats de tooltip boven de tekst */
+    bottom: -105%; /* Plaats de tooltip boven de tekst */
     left: 50%;
     transform: translateX(-50%);
     z-index: 1;
@@ -440,7 +440,7 @@ footer p {
     width: 100%;
     height: 55%; /* Stel de hoogte van de slideshow in */
     overflow: hidden;
-    margin: 10px auto; /* Centreer de slideshow */
+    margin: 5px auto; /* Centreer de slideshow */
 }
 
 .slideshow .slide {
@@ -620,7 +620,7 @@ footer p {
 
 .quote h3{
     font-size: 1.5rem;
-    font-family: 'Rondal', sans-serif;
+    font-family: 'Kendra Signature', "Corinthia", sans-serif;/* Zorgt voor consistentie in de stijl */
     max-width: 50%;
     margin: 0 auto; /* Centreer de tekst */
 }
@@ -678,6 +678,11 @@ footer p {
     line-height: 1.5;
 }
 
+.content-block p {
+    position: relative; /* Zorg ervoor dat de cirkel relatief is aan de paragraaf */
+    z-index: 1; /* Zorg ervoor dat de tekst boven de cirkel staat */
+}
+
 .overOns{
     padding-bottom: 20px;
 }
@@ -687,7 +692,7 @@ footer p {
     background-image: url('../assets/images/backgroundImageOverOns.jpeg'); /* Vervang door je afbeelding */
     background-size: cover;
     background-position: center;
-    min-height: 80vh;
+    min-height: 100vh;
     max-width: 40%;
     border-radius: 0 50% 0 0;
 }
