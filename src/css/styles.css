@@ -613,14 +613,9 @@ footer p {
 .quote{
     margin: 0 auto;
     text-align: center;
-    padding: 20px 0;
-    background-color:#FDF5E6;
-    color: #515541;
-}
-
-.reverse-colors .quote {
-    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
-    color: #FDF5E6; /* Oorspronkelijk #515541 */
+    padding: 40px 0 20px 0;
+    background-color:#b88070;
+    color: #FDF5E6;
 }
 
 .quote h3{
@@ -649,7 +644,7 @@ footer p {
 }
 
 .content-block {
-    background-color: #FDF5E6;
+    background-color: #b88070;
     display: flex;
     justify-content: space-between;
     align-items: stretch;
@@ -660,7 +655,8 @@ footer p {
 }
 
 .reverse-colors .content-block {
-    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
+    background-color: #b88070; /* Oorspronkelijk #FDF5E6 */
+    border: 0;
 }
 
 .column {
@@ -670,25 +666,20 @@ footer p {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: #515541; /* Tekstkleur */
-    background-color: #FDF5E6;
+    color: #FDF5E6; /* Tekstkleur */
+    background-color: #b88070;
 }
 
 .column p{
     padding: 10px;
     font-size: 1rem;
-    font-weight: 100;
+    font-weight: 200;
     max-width: 90%;
     line-height: 1.5;
 }
 
 .overOns{
     padding-bottom: 20px;
-}
-
-.reverse-colors .column {
-    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
-    color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
 /* Middelste kolom met achtergrondafbeelding */
