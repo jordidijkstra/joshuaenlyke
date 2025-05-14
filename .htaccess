@@ -1,0 +1,6 @@
+# Schakel URL herschrijven in
+RewriteEngine On
+
+# Verberg .html extensies
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*)$ $1.html [L]

@@ -262,14 +262,10 @@ section p{
 
 .anekdotes a{
     background-color: #FDF5E6;
-    color: #515541; /* Oorspronkelijk #515541 */
-    text-decoration: none; /* Verwijder de standaard onderstreping */
-    margin: 10px auto; /* Centreer de tekst */
 }
 
 .reverse-colors .anekdotes a {
     background-color: #515541;
-    color: #FDF5E6; /* Oorspronkelijk #FDF5E6 */
 }
 
 .reverse-colors .cadeautip a {
@@ -640,13 +636,19 @@ footer p {
 .left-align {
     text-align: left; /* Zorg ervoor dat de tekst links uitgelijnd is */
     width: 100%; /* Zorg ervoor dat de tekst de volledige breedte gebruikt */
-    padding-right: 50%; /* Voeg padding toe aan de rechterkant voor ruimte */
+    padding-right: 40%; /* Voeg padding toe aan de rechterkant voor ruimte */
+    display: flex; /* Zorg ervoor dat de tekst in een flex-container staat */
+    gap: 5px;
+    margin: 10px auto;
 }
 
 .right-align {
     text-align: right; /* Zorg ervoor dat de tekst rechts uitgelijnd is */
     width: 100%;
-    padding-left: 50%;
+    padding-left: 40%;
+    display: flex; /* Zorg ervoor dat de tekst in een flex-container staat */
+    gap: 5px;
+    margin: 10px auto;
 }
 
 /* Algemene styling voor de content-blok */
@@ -676,7 +678,6 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     text-align: center;
     color: #FDF5E6; /* Tekstkleur */
     background-color: #b88070;
@@ -695,9 +696,6 @@ footer p {
     z-index: 1; /* Zorg ervoor dat de tekst boven de cirkel staat */
 }
 
-.overOns{
-    padding-bottom: 20px;
-}
 
 /* Middelste kolom met achtergrondafbeelding */
 .column-left {
@@ -709,16 +707,59 @@ footer p {
     border-radius: 0 50% 0 0;
 }
 
-
-.container-ring {
-    background-image: url('../assets/images/bgRing.jpeg'); /* Vervang door het pad naar je afbeelding */
+.profielfoto{
+    background: url('../assets/images/lyke.jpg') center center no-repeat;
     background-size: cover; /* Zorg ervoor dat de afbeelding de container volledig bedekt */
-    background-position: center; /* Centreer de afbeelding */
-    background-repeat: no-repeat; /* Voorkom dat de afbeelding herhaald wordt */
-    width: 100%; /* Zorg ervoor dat de container de volledige breedte gebruikt */
-    height: 25vh; /* Stel een vaste hoogte in (pas aan naar wens) */
+    min-width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 5px;
 }
 
+.message h4{
+    font-family: 'Outfit', sans-serif;
+    padding: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.sterren{
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+.message h5{
+    font-family: 'Outfit', sans-serif;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.message{
+    background-color: #FDF5E6;
+    color: #515541; /* Oorspronkelijk #FDF5E6 */
+    border-radius: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    scrollbar-width: thin; /* Maak de scrollbar dun */
+    scrollbar-color: #b88070 transparent; /* Roze scrollbar met een transparante track */
+    text-align: left;
+}
+
+/* Scrollbar-styling voor de .message-div */
+.message::-webkit-scrollbar {
+    width: 6px; /* Maak de scrollbar dun */
+}
+
+.message::-webkit-scrollbar-thumb {
+    background-color: #b88070; /* Roze kleur voor de scrollbar */
+    border-radius: 10px; /* Maak de scrollbar afgerond */
+}
+
+.message::-webkit-scrollbar-track {
+    background: transparent; /* Transparante achtergrond voor de scrollbar-track */
+}
 
 @media (min-width: 1024px) {
     .container-inner {
@@ -783,7 +824,12 @@ footer p {
     }
 
     .container {
-        padding: 20px; /* Verminder de padding */
+        padding: 10px; /* Verminder de padding */
+        width: 100%; /* Zorg ervoor dat de container de volledige breedte gebruikt */
+    }
+
+    .container-rsvp {
+        padding: 10px; /* Verminder de padding */
         width: 100%; /* Zorg ervoor dat de container de volledige breedte gebruikt */
     }
 
@@ -791,10 +837,10 @@ footer p {
         flex-direction: column;
         width: 100%; /* Zorg ervoor dat de container de volledige breedte gebruikt */
         gap: 15px; /* Verminder de ruimte tussen secties */
+        padding: 10px;
     }
 
     section {
-        padding: 15px; /* Verminder de padding binnen secties */
         max-width: none;
         width: 90%;
         margin: 0 auto; /* Centreer de secties */
@@ -864,9 +910,83 @@ footer p {
         overflow: hidden; /* Verberg de scrollbar */
     }
 
+    .container-inner-rsvp p{
+        font-size: 1.5rem;
+    }
+
     .loading-svg {
         width: 150px; /* Verklein de SVG voor kleinere schermen */
         height: 150px; /* Zorg ervoor dat de hoogte overeenkomt met de breedte */
+    }
+
+    .container-over-ons {
+        flex-direction: column; /* Plaats alles onder elkaar */
+        gap: 20px; /* Voeg ruimte toe tussen de secties */
+        padding: 20px; /* Voeg padding toe rondom de container */
+        background-color: #b88070;
+    }
+
+    .content-block {
+        flex-direction: column; /* Zorg ervoor dat de kolommen onder elkaar komen */
+        gap: 20px; /* Voeg ruimte toe tussen de kolommen */
+        width: 100%; /* Zorg ervoor dat de kolommen de volledige breedte gebruiken */
+    }
+
+    .column-left{
+        display: none;
+    }
+
+    .column-left, .column-right {
+        max-width: 100%; /* Zorg ervoor dat de kolommen de volledige breedte gebruiken */
+        margin: 0 auto; /* Centreer de kolommen */
+    }
+
+    .quote h3 {
+        font-size: 1.2rem; /* Verklein de tekstgrootte van de quote */
+        text-align: center; /* Centreer de tekst */
+    }
+
+    .profielfoto {
+        width: 60px; /* Verklein de profielfoto */
+        height: 60px;
+        margin: 0 auto; /* Centreer de profielfoto */
+    }
+
+    .message {
+        max-height: none; /* Beperk de hoogte van de scrollbare div */
+        padding: 10px; /* Voeg padding toe voor een nette weergave */
+        overflow-y: visible;
+    }
+
+    .sterren {
+        font-size: 0.8rem; /* Verklein de sterrensectie */
+        text-align: center;
+    }
+
+    .message h4, .message h5 {
+        font-size: 1rem; /* Verklein de kopteksten */
+        text-align: center;
+    }
+
+    .left-align, .right-align {
+        flex-direction: column; /* Plaats de inhoud onder elkaar */
+        text-align: center; /* Centreer de tekst */
+        padding: 0; /* Verwijder padding */
+    }
+
+    .right-align {
+        display: flex;
+        flex-direction: column; /* Plaats de elementen onder elkaar */
+        align-items: center; /* Centreer de inhoud */
+    }
+
+    .right-align .profielfoto {
+        order: -1; /* Zorg ervoor dat de profielfoto boven de message komt */
+        margin-bottom: 10px; /* Voeg wat ruimte toe onder de profielfoto */
+    }
+
+    .right-align .message {
+        order: 0; /* Laat de message onder de profielfoto staan */
     }
 }
 
