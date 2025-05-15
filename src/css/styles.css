@@ -355,10 +355,6 @@ section ul {
     opacity: 1; /* Maak de tooltip zichtbaar */
 }
 
-.mobile-only {
-    display: none;
-}
-
 footer {
     font-family: "Outfit", sans-serif;
     text-align: center;
@@ -876,7 +872,8 @@ footer p {
     }
 
     .mobile-only {
-        display: inline-block;
+        background: url('../assets/images/logoTransparant.png') center center no-repeat;
+        background-size: cover; /* Zorg ervoor dat de afbeelding de container volledig bedekt */
     }
 
     footer p {
