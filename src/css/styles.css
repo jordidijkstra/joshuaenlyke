@@ -894,7 +894,7 @@ footer p {
     }
 
     #loading-overlay {
-        position: absolute; /* Gebruik absolute positionering als fallback */
+        position: fixed; /* Gebruik absolute positionering als fallback */
         top: 0;
         left: 0;
         width: 100%;
