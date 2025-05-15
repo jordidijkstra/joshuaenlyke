@@ -1045,6 +1045,7 @@ footer p {
     .profielfoto1{
         position: relative;
         top:50px;
+        z-index: 1;
     }
 
     .profielfoto2{
