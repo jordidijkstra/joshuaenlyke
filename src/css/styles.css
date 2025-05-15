@@ -241,19 +241,16 @@ section p{
     margin: 0 auto; /* Centreert de tekst */
 }
 
-.planning {
-    display: flex; /* Activeer Flexbox */
-    flex-direction: column; /* Zorg ervoor dat de inhoud onder elkaar staat */
-    justify-content: center; /* Centreer de inhoud verticaal */
-    align-items: center;
-}
-
 .rsvp p{
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
-.cadeautip p, .cadeautip h2{
-    padding: 10px 0;
+.cadeautip h2{
+    padding: 20px 0;
+}
+
+.cadeautip p{
+    padding: 15px 0;
 }
 
 .cadeautip a {
@@ -797,6 +794,24 @@ footer p {
 
     .right-align {
         padding-left: 30%; /* Voeg padding toe aan de linkerkant voor ruimte */
+    }
+
+    header p{
+        font-size: 2rem;
+        padding-top: 20px;
+    }
+
+    #countdown{
+        gap: 10px; /* Verminder de ruimte tussen de countdown-items */
+        position: relative;
+        left: 0;
+        transform: translateX(0); /* Verwijder de translate om de countdown-items te centreren */
+        bottom: -20px; /* Verwijder de negatieve waarde om de countdown-items onder de header te plaatsen */
+        margin: 20px auto; /* Centreer de countdown-items */
+    }
+
+    .countdown-item p{
+        padding: 0;
     }
 }
 
