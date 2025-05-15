@@ -817,12 +817,12 @@ footer p {
     }
 
     header h2 {
-        font-size: 3.5rem; /* Pas de grootte van de subtitel aan */
+        font-size: 3rem; /* Pas de grootte van de subtitel aan */
         margin-bottom: 5px;
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
         text-align: center;
-        width: 50%;
+        width: 60%;
     }
 
     header p {
