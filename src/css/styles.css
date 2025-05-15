@@ -709,13 +709,21 @@ footer p {
     border-radius: 0 50% 0 0;
 }
 
-.profielfoto{
-    background: url('../assets/images/lyke.jpg') center center no-repeat;
-    background-size: cover; /* Zorg ervoor dat de afbeelding de container volledig bedekt */
+.profielfoto{ /* Zorg ervoor dat de afbeelding de container volledig bedekt */
     min-width: 50px;
     height: 50px;
     border-radius: 50%;
     margin: 5px;
+}
+
+.profielfoto1{
+    background: url('../assets/images/joshua.jpg') center center no-repeat;
+    background-size: cover;
+}
+
+.profielfoto2{
+    background: url('../assets/images/lyke.jpg') center center no-repeat;
+    background-size: cover;
 }
 
 .message h4{
