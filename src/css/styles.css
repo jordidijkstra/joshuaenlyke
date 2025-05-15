@@ -779,6 +779,20 @@ footer p {
         padding: 0;
     }
 
+    body:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-position: inherit;
+        background-image: inherit;
+        background-size: inherit;
+        background-attachment: inherit;
+        background-repeat: inherit;
+        position: fixed;
+        top: 0;
+        z-index: -1;
+    }
+
     .header-container {
         padding: 20px 20px 40px 20px; /* Verminder de padding voor kleinere schermen */
     }
