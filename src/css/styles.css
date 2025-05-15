@@ -385,6 +385,10 @@ footer p {
     border: 1px solid #515541; /* Kleur van de rand */
     border-radius: 25px; /* Maak de schakelaar volledig afgerond */
     background-color: #FDF5E6; /* Achtergrondkleur van de schakelaar */
+    -webkit-transform: translateZ(0); /* Forceer hardware-acceleratie */
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden; /* Verberg de achterkant van het element */
+    backface-visibility: hidden;
 }
 
 .toggle-switch .reverse-colors {
@@ -404,6 +408,10 @@ footer p {
     border-radius: 25px; /* Maak de schakelaar volledig afgerond */
     cursor: pointer;
     transition: background-color 0.3s;
+    -webkit-transform: translateZ(0); /* Forceer hardware-acceleratie */
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden; /* Verberg de achterkant van het element */
+    backface-visibility: hidden;
 }
 
 .toggle-switch .slider .reverse-colors {
@@ -420,6 +428,10 @@ footer p {
     top: 1px; /* Plaats de cirkel binnen de schakelaar */
     left: 1px; /* Plaats de cirkel aan de linkerkant */
     transition: transform 0.3s;
+    -webkit-transform: translateZ(0); /* Forceer hardware-acceleratie */
+    transform: translateZ(0);
+    -webkit-backface-visibility: hidden; /* Verberg de achterkant van het element */
+    backface-visibility: hidden;
 }
 
 .toggle-switch .slider::before .reverse-colors {
@@ -753,6 +765,8 @@ footer p {
     scrollbar-width: thin; /* Maak de scrollbar dun */
     scrollbar-color: #b88070 transparent; /* Roze scrollbar met een transparante track */
     text-align: left;
+    -webkit-transform: translateZ(0); /* Forceer hardware-acceleratie in Safari */
+    transform: translateZ(0);
 }
 
 /* Scrollbar-styling voor de .message-div */
@@ -767,6 +781,29 @@ footer p {
 
 .message::-webkit-scrollbar-track {
     background: transparent; /* Transparante achtergrond voor de scrollbar-track */
+}
+
+.fade-in {
+    -webkit-animation: fadeIn 1s ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media (min-width: 1024px) {
