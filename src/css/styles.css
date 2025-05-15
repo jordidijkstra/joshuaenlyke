@@ -850,6 +850,12 @@ footer p {
     .countdown-item p{
         padding: 0;
     }
+
+    .quote h3{
+        font-size: 1em;
+        max-width: 100%;
+        padding: 20px 0 10px 0;
+    }
 }
 
 @media (max-width: 768px) {
