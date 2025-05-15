@@ -153,7 +153,7 @@ h1 {
     margin: 0 auto;
     display: flex;
     flex-direction: column; /* Standaard: secties onder elkaar */
-    background-color: rgb(81, 85, 65);
+    background-color: #515541;
     padding: 20px 0;
 }
 
@@ -210,10 +210,10 @@ section {
     max-width: 100%; /* Zorg ervoor dat secties niet groter worden dan de container */
     margin: 10px;
     padding: 50px 0;
-    background-color: #515541;
+    background-color: #515541; /* Achtergrondkleur van de sectie */
     color: #FDF5E6;
     text-align: center;
-    border: 1px solid #FDF5E6; /* Oorspronkelijk #515541 */
+    border:1px solid #FDF5E6; /* Voeg een rand toe aan de sectie */
 }
 
 .reverse-colors section {
@@ -225,10 +225,6 @@ section {
 section h2 {
     font-family: "Outfit", sans-serif;
     padding: 20px 0;
-}
-
-.cadeautip a:hover {
-    text-decoration: underline; /* Voeg onderstreping toe bij hover */
 }
 
 section p, li, a {
@@ -256,7 +252,8 @@ section p{
 }
 
 .cadeautip a {
-    color: #FDF5E6; /* Oorspronkelijk #515541 */
+    background-color: #FDF5E6;
+    color: #515151; /* Oorspronkelijk #515541 */
     text-decoration: none; /* Verwijder de standaard onderstreping */
 }
 
@@ -269,7 +266,8 @@ section p{
 }
 
 .reverse-colors .cadeautip a {
-    color: #515541; /* Oorspronkelijk #FDF5E6 */
+    background-color: #515541;
+    color: #FDF5E6; /* Oorspronkelijk #FDF5E6 */
 }
 
 section li {
