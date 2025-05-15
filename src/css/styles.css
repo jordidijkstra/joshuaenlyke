@@ -785,16 +785,7 @@ footer p {
         font-size: 16px; /* Zorg voor een leesbare tekstgrootte */
         margin: 0;
         padding: 0;
-    }
-
-    body:before {
-        position: fixed;
-        content: '';
-        width: 100%;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        z-index: -1;
+        background: none;
     }
 
     .header-container {
@@ -813,16 +804,16 @@ footer p {
     }
 
     header h1 {
-        font-size: 0.75rem; /* Pas de grootte van de titel aan */
+        font-size: 1.5rem; /* Pas de grootte van de titel aan */
         margin-bottom: 5px;
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
         text-align: center;
-        width: 50%;
+        width: 70%;
     }
 
     header h2 {
-        font-size: 2rem; /* Pas de grootte van de subtitel aan */
+        font-size: 3.5rem; /* Pas de grootte van de subtitel aan */
         margin-bottom: 5px;
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
@@ -832,11 +823,11 @@ footer p {
 
     header p {
         font-size: 1.5rem; /* Pas de grootte van de tekst aan */
-        margin-bottom: 5px; /* Voeg ruimte toe onder de tekst */
+        margin: 5px 0; /* Voeg ruimte toe onder de tekst */
         word-break: break-word; /* Breek woorden indien nodig */
         white-space: normal; /* Zorg ervoor dat de tekst meerdere regels kan gebruiken */
         text-align: center;
-        width: 50%;
+        width: 70%;
     }
 
     .container {
@@ -964,14 +955,24 @@ footer p {
     }
 
     .profielfoto {
-        width: 60px; /* Verklein de profielfoto */
-        height: 60px;
+        width: 100px; /* Verklein de profielfoto */
+        height: 100px;
         margin: 0 auto; /* Centreer de profielfoto */
+    }
+
+    .profielfoto1{
+        position: relative;
+        top:50px;
+    }
+
+    .profielfoto2{
+        position: relative;
+        top:60px;
     }
 
     .message {
         max-height: none; /* Beperk de hoogte van de scrollbare div */
-        padding: 10px; /* Voeg padding toe voor een nette weergave */
+        padding: 60px 10px 10px 10px; /* Voeg padding toe voor een nette weergave */
         overflow-y: visible;
     }
 
