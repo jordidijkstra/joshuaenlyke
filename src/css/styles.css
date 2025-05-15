@@ -81,6 +81,10 @@ header p {
     color: #FDF5E6; /* Oorspronkelijk #515541 */
 }
 
+.agenda{
+    pointer-events: none;
+}
+
 .default{
     background-color: #FDF5E6;
     color: #515541;
@@ -876,6 +880,10 @@ footer p {
 
     .hideInMobile {
         display: none; /* Verberg elementen met deze klasse op mobiele apparaten */
+    }
+
+    .agenda{
+        pointer-events: auto;
     }
 
     #countdown {
