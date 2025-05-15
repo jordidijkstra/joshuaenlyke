@@ -363,13 +363,13 @@ footer {
     font-family: "Outfit", sans-serif;
     text-align: center;
     padding: 10px;
-    background-color: #FDF5E6; /* Oorspronkelijk #515541 */
-    color: #515541; /* Oorspronkelijk #FDF5E6 */
+    background-color: #515541; /* Oorspronkelijk #515541 */
+    color: #FDF5E6; /* Oorspronkelijk #FDF5E6 */
 }
 
 body.reverse-colors footer {
-    background-color: #515541; /* Oorspronkelijk #FDF5E6 */
-    color: #FDF5E6; /* Oorspronkelijk #515541 */
+    background-color: #FDF5E6; /* Oorspronkelijk #FDF5E6 */
+    color: #515541; /* Oorspronkelijk #515541 */
 }
 
 footer p {
@@ -619,7 +619,7 @@ footer p {
 .quote{
     margin: 0 auto;
     text-align: center;
-    padding: 40px 0 20px 0;
+    padding: 20px 0 20px 0;
     background-color:#b88070;
     color: #FDF5E6;
 }
@@ -627,7 +627,7 @@ footer p {
 .quote h3{
     font-size: 1.5rem;
     font-family: 'Rufina Signature', "Corinthia", sans-serif;/* Zorgt voor consistentie in de stijl */
-    max-width: 70%;
+    max-width: 100%;
     margin: 0 auto; /* Centreer de tekst */
 }
 
@@ -653,6 +653,10 @@ footer p {
 .container-over-ons{
     padding: 0;
     margin: 0 auto; /* Centreer de container */
+}
+
+.reverse-colors .container-over-ons {
+    background-color: #b88070; /* Oorspronkelijk #515541 */
 }
 
 .content-block {
