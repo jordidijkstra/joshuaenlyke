@@ -191,6 +191,7 @@ h1 {
 .container-inner-rsvp {
     width: 80vw; /* Zorgt ervoor dat de inhoud dezelfde breedte heeft als de header */
     margin: 0 auto; /* Centreert de inhoud binnen de container */
+    padding-top: 10px;
 }
 
 .container-rsvp p {
@@ -781,6 +782,21 @@ footer p {
     section {
         flex: 1; /* Zorgt ervoor dat secties gelijke breedte hebben */
         margin: 0 10px; /* Ruimte tussen de secties */
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .column-left {
+        min-height: 50vh; /* Zorg ervoor dat de afbeelding niet te klein wordt */
+        border-radius: 0 25% 0 0;
+    }
+
+    .left-align {
+        padding-right: 30%; /* Voeg padding toe aan de rechterkant voor ruimte */
+    }
+
+    .right-align {
+        padding-left: 30%; /* Voeg padding toe aan de linkerkant voor ruimte */
     }
 }
 
